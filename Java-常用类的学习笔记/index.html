@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="常用类Object类超类，基类，位于继承树的最顶层  作为参数，可接受任何对象 作为返回值，可返回任何对象  getClass()方法1public final Class&lt;?&gt; getClass()&amp;#123;&amp;#125;  返回引用中储存的实际对象类型 hashCode()方法1public int hashCode()&amp;#123;&amp;#125;   返回该对象的哈希码值  哈希值根">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 常用类的学习">
+<meta property="og:url" content="http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="欢迎来到HawYior的博客">
+<meta property="og:description" content="常用类Object类超类，基类，位于继承树的最顶层  作为参数，可接受任何对象 作为返回值，可返回任何对象  getClass()方法1public final Class&lt;?&gt; getClass()&amp;#123;&amp;#125;  返回引用中储存的实际对象类型 hashCode()方法1public int hashCode()&amp;#123;&amp;#125;   返回该对象的哈希码值  哈希值根">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206204033562.png">
+<meta property="og:image" content="c:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206230013293.png">
+<meta property="og:image" content="c:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206230559535.png">
+<meta property="article:published_time" content="2022-12-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-17T07:09:36.752Z">
+<meta property="article:author" content="HawYior">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206204033562.png">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Java 常用类的学习</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HuoYu233">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/Java-awt%E4%B8%8Eswing%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&text=Java 常用类的学习"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&is_video=false&description=Java 常用类的学习"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Java 常用类的学习&body=Check out this article: http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&name=Java 常用类的学习&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&t=Java 常用类的学习"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">常用类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getClass-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">getClass()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hashCode-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">hashCode()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">toString方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#equals-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.4.</span> <span class="toc-text">equals()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#finalize-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.5.</span> <span class="toc-text">finalize()方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">包装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E8%A3%85%E7%AE%B1%E3%80%81%E6%8B%86%E7%AE%B1"><span class="toc-number">1.2.1.</span> <span class="toc-text">类型转换与装箱、拆箱</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">基本类型和字符串的转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Integer%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">Integer缓冲区</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">String类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.1.</span> <span class="toc-text">常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-length"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">public int length()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-char-charAt-int-index"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">public char charAt(int index)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-boolean-contains-String-str"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">public boolean contains(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-char-toCharArray"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">public char[] toCharArray()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-indexOf-String-str"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">public int indexOf(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-lastIndexOf-String-str"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">public int lastIndexOf(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-trim"><span class="toc-number">1.3.1.7.</span> <span class="toc-text">public String trim()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-toUpperCase"><span class="toc-number">1.3.1.8.</span> <span class="toc-text">public String toUpperCase()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-boolean-endsWith-String-str"><span class="toc-number">1.3.1.9.</span> <span class="toc-text">public boolean endsWith(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-replace-char-oldChar-char-newChar"><span class="toc-number">1.3.1.10.</span> <span class="toc-text">public String replace(char oldChar,char newChar)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-spilit-String-str"><span class="toc-number">1.3.1.11.</span> <span class="toc-text">public String[] spilit(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.1.12.</span> <span class="toc-text">比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.3.2.</span> <span class="toc-text">可变字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BigDecimal%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">BigDecimal类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E7%B1%BB"><span class="toc-number">1.5.</span> <span class="toc-text">Date类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar%E7%B1%BB"><span class="toc-number">1.6.</span> <span class="toc-text">Calendar类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SimpleDateFormat%E7%B1%BB"><span class="toc-number">1.7.</span> <span class="toc-text">SimpleDateFormat类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#System%E7%B1%BB"><span class="toc-number">1.8.</span> <span class="toc-text">System类</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Java 常用类的学习
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">HawYior</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2022-12-05T16:00:00.000Z" itemprop="datePublished">2022-12-06</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h1><h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><p>超类，基类，位于继承树的最顶层</p>
+<ul>
+<li>作为参数，可接受任何对象</li>
+<li>作为返回值，可返回任何对象</li>
+</ul>
+<h3 id="getClass-方法"><a href="#getClass-方法" class="headerlink" title="getClass()方法"></a>getClass()方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> Class&lt;?&gt; getClass()&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>返回引用中储存的实际对象类型</p>
+<h3 id="hashCode-方法"><a href="#hashCode-方法" class="headerlink" title="hashCode()方法"></a>hashCode()方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>返回该对象的哈希码值</p>
+</li>
+<li><p>哈希值根据对象的地址或字符串或数字使用hash算法计算出来的int类型的数值</p>
+</li>
+<li><p>一般情况下相同对象返回相同哈希码</p>
+</li>
+</ul>
+<h3 id="toString方法"><a href="#toString方法" class="headerlink" title="toString方法"></a>toString方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>返回对象的字符串表示</li>
+<li>可以根据程序需求<u>重写</u>覆盖该方法</li>
+</ul>
+<h3 id="equals-方法"><a href="#equals-方法" class="headerlink" title="equals()方法"></a>equals()方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>比较两个对象地址是否相等</p>
+<p>一般重写</p>
+<h3 id="finalize-方法"><a href="#finalize-方法" class="headerlink" title="finalize()方法"></a>finalize()方法</h3><ul>
+<li>当对象被判定为垃圾对象时，由JVM自动调用此方法，用以标记垃圾对象，进入回收队列</li>
+<li>垃圾对象：没有有效引用指向此对象时，为垃圾对象</li>
+<li>垃圾回收：由GC销毁垃圾对象，释放数据储存空间</li>
+<li>自动回收机制：JVM的内存耗尽，一次性回收所有垃圾对象</li>
+<li>手动回收机制：使用System.gc()，通知JVM执行垃圾回收</li>
+</ul>
+<p><em><strong>从java9开始被弃用</strong></em></p>
+<h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><p>基本数据类型所对应的引用数据类型</p>
+<ul>
+<li>Object可统一所有数据，包装类的默认值是null</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>包装类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long</td>
+<td>Long</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>Double</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Boolean</td>
+</tr>
+<tr>
+<td>char</td>
+<td>Character</td>
+</tr>
+</tbody></table>
+<h3 id="类型转换与装箱、拆箱"><a href="#类型转换与装箱、拆箱" class="headerlink" title="类型转换与装箱、拆箱"></a>类型转换与装箱、拆箱</h3><p>基本类型 -&gt; 栈</p>
+<p>引用类型 -&gt; 堆</p>
+<p>基本类型 -&gt; 引用类型：<strong>装箱</strong></p>
+<p>引用类型 -&gt; 基本类型：<strong>拆箱</strong></p>
+<ul>
+<li>Number类</li>
+</ul>
+<p>引用类型—&gt;基本类型</p>
+<ul>
+<li>构造方法&#x2F;valueof()</li>
+</ul>
+<p>基本类型—&gt;引用类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Integer</span> <span class="variable">i1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Integer</span>(<span class="number">1</span>);</span><br><span class="line"><span class="type">Integer</span> <span class="variable">i2</span> <span class="operator">=</span> Integer.valueof(<span class="number">1</span>);```</span><br></pre></td></tr></table></figure>
+
+<p><u>JDK1.5之后，提供自动装箱和拆箱</u></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">age</span> <span class="operator">=</span> <span class="number">18</span>;</span><br><span class="line"><span class="type">Integer</span> <span class="variable">i3</span> <span class="operator">=</span> age;<span class="comment">//自动装箱</span></span><br><span class="line"><span class="type">int</span> <span class="variable">age2</span> <span class="operator">=</span> i3;<span class="comment">//自动拆箱</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="基本类型和字符串的转换"><a href="#基本类型和字符串的转换" class="headerlink" title="基本类型和字符串的转换"></a>基本类型和字符串的转换</h4><ul>
+<li>基本类型转换成字符串</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="comment">//基本数据类型转换为String</span></span><br><span class="line"><span class="comment">//1. +号</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> a+<span class="string">&quot;&quot;</span>;</span><br><span class="line"><span class="comment">//toString();</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> Integer.toString(a);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>字符串转换基本类型</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;10&quot;</span>;</span><br><span class="line"><span class="comment">//1. Integer.parseInt()</span></span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> Integer.parseInt(s);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>boolean字符串形式转换成基本类型</li>
+</ul>
+<p>“true” —–&gt; true</p>
+<p>非”true” —–&gt; false</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;true&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;true2&quot;</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b1</span> <span class="operator">=</span> Boolean.parseBoolean(s1);</span><br><span class="line"><span class="type">boolean</span> <span class="variable">b2</span> <span class="operator">=</span> Boolean.parseBoolean(s2);</span><br></pre></td></tr></table></figure>
+
+<h4 id="Integer缓冲区"><a href="#Integer缓冲区" class="headerlink" title="Integer缓冲区"></a>Integer缓冲区</h4><p>Java预先创建了256个常用的整数包装类型对象</p>
+<p>在实际应用中，对已创建的对象进行复用</p>
+<p>自动装箱：Integer.valueOf(num)</p>
+<p>如果-128&lt;num&lt;127 使用valueOf(num)</p>
+<p>如果不是, new Integer(num);</p>
+<p><img src="C:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206204033562.png" alt="image-20221206204033562"></p>
+<h2 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h2><ul>
+<li>字符串是常量，创建后不可改变</li>
+<li>字符串字面值储存在字符串池中，可以共享</li>
+</ul>
+<p>new String();创建两个对象 ，堆池各一个，可能浪费空间</p>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="public-int-length"><a href="#public-int-length" class="headerlink" title="public int length()"></a>public int length()</h4><p>返回字符串的长度</p>
+<h4 id="public-char-charAt-int-index"><a href="#public-char-charAt-int-index" class="headerlink" title="public char charAt(int index)"></a>public char charAt(int index)</h4><p>返回某个位置的字符</p>
+<h4 id="public-boolean-contains-String-str"><a href="#public-boolean-contains-String-str" class="headerlink" title="public boolean contains(String str)"></a>public boolean contains(String str)</h4><p>判断是否包含某个字字符串</p>
+<h4 id="public-char-toCharArray"><a href="#public-char-toCharArray" class="headerlink" title="public char[] toCharArray()"></a>public char[] toCharArray()</h4><p>将字符串转换成数组</p>
+<h4 id="public-int-indexOf-String-str"><a href="#public-int-indexOf-String-str" class="headerlink" title="public int indexOf(String str)"></a>public int indexOf(String str)</h4><p>返回字符串首次出现的位置</p>
+<h4 id="public-int-lastIndexOf-String-str"><a href="#public-int-lastIndexOf-String-str" class="headerlink" title="public int lastIndexOf(String str)"></a>public int lastIndexOf(String str)</h4><p>返回字符串最后一次出现的位置</p>
+<h4 id="public-String-trim"><a href="#public-String-trim" class="headerlink" title="public String trim()"></a>public String trim()</h4><p>去掉字符串<u>前后</u>的空格</p>
+<h4 id="public-String-toUpperCase"><a href="#public-String-toUpperCase" class="headerlink" title="public String toUpperCase()"></a>public String toUpperCase()</h4><p>小写转成大写&#x2F;大写转成小写(Lower)</p>
+<h4 id="public-boolean-endsWith-String-str"><a href="#public-boolean-endsWith-String-str" class="headerlink" title="public boolean endsWith(String str)"></a>public boolean endsWith(String str)</h4><p>判断字符串是否以str结尾&#x2F;开头(starts)</p>
+<h4 id="public-String-replace-char-oldChar-char-newChar"><a href="#public-String-replace-char-oldChar-char-newChar" class="headerlink" title="public String replace(char oldChar,char newChar)"></a>public String replace(char oldChar,char newChar)</h4><p>将旧字符串替换成新字符串</p>
+<h4 id="public-String-spilit-String-str"><a href="#public-String-spilit-String-str" class="headerlink" title="public String[] spilit(String str)"></a>public String[] spilit(String str)</h4><p>根据str做拆分</p>
+<h4 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h4><ul>
+<li>equals() &#x2F; equalsIgnoreCase()</li>
+</ul>
+<p>比较字符串内容</p>
+<ul>
+<li>compareTo()</li>
+</ul>
+<p>比较字典序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s1</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>; <span class="comment">//a 字典序97</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s2</span> <span class="operator">=</span> <span class="string">&quot;xyz&quot;</span>; <span class="comment">//x 字典序120</span></span><br><span class="line">System.out.println(s1.compareTo(s2)); <span class="comment">//97-120 = -23</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s3</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>; <span class="comment">//length==3</span></span><br><span class="line"><span class="type">String</span> <span class="variable">s4</span> <span class="operator">=</span> <span class="string">&quot;abcdefg&quot;</span>; <span class="comment">//length =7</span></span><br><span class="line">System.out.println(s3.compareTo(s4)); <span class="comment">//3-7=-4</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="可变字符串"><a href="#可变字符串" class="headerlink" title="可变字符串"></a>可变字符串</h3><ul>
+<li>StringBuffer</li>
+</ul>
+<p>可变长字符串，JDK1.0提供，运行效率慢，线程安全</p>
+<p>(1) append();追加</p>
+<p>(2)insert();添加</p>
+<p>(3)replace();替换</p>
+<p>(4)delete();删除</p>
+<ul>
+<li>StringBuilder</li>
+</ul>
+<p>功能和StirngBuffer类似</p>
+<p>可变长字符串，JDK5.0提供，运行效率快，线程不安全</p>
+<ul>
+<li>两者(1)效率比String高 (2)比String节省内存</li>
+</ul>
+<h2 id="BigDecimal类"><a href="#BigDecimal类" class="headerlink" title="BigDecimal类"></a>BigDecimal类</h2><p>double是近似值储存，运算可能会有精度损失</p>
+<ul>
+<li>加法：add()</li>
+<li>减法：subtract()</li>
+<li>乘法：multiply()</li>
+<li>除法：divide()</li>
+</ul>
+<p>△ 除法中，bd1.divide(bd2)除不尽会报错</p>
+<p>此时可以用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">divide(BigDecimal divisor, <span class="type">int</span> scale, RoundingMode roundingMode)</span><br></pre></td></tr></table></figure>
+
+<p>scale：指定精确到小数点后几位</p>
+<p>mode：指定小数部分的取舍模式。</p>
+<p>四舍五入取值为BigDecimal.ROUND_HALF_UP</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BigDecimal</span> <span class="variable">bd1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;5&quot;</span>);</span><br><span class="line"><span class="type">BigDecimal</span> <span class="variable">ans</span> <span class="operator">=</span> bd1.divide(<span class="keyword">new</span> <span class="title class_">BigDecimal</span>(<span class="string">&quot;3&quot;</span>),<span class="number">3</span>,BigDecimal.ROUND_HALF_UP);</span><br><span class="line"><span class="comment">//保留三位小数，并且四舍五入</span></span><br><span class="line">System.out.println(ans); <span class="comment">//1.667</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Date类"><a href="#Date类" class="headerlink" title="Date类"></a>Date类</h2><p>表示特定的瞬间，精确到毫秒</p>
+<p>大部分方法已被Calendar取代</p>
+<h2 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h2><ul>
+<li>Calendar提供了获取或设置各种日历字段的方法</li>
+<li>构造方法 protected Calendar()</li>
+</ul>
+<p>由于修饰符是protected,所以无法直接创建该对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Calendar</span> <span class="variable">calendar</span> <span class="operator">=</span> Calendar.getInstance(); <span class="comment">//获取当前时间</span></span><br><span class="line"><span class="type">int</span> <span class="variable">year</span> <span class="operator">=</span> calendar.get(Calendar.YEAR);</span><br><span class="line">System.out.println(year+<span class="string">&quot;年&quot;</span>);<span class="comment">//2022</span></span><br><span class="line"><span class="type">Calendar</span> <span class="variable">calendar1</span> <span class="operator">=</span> Calendar.getInstance();</span><br><span class="line">calendar1.set(Calendar.YEAR,<span class="number">2021</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">year2</span> <span class="operator">=</span> calendar1.get(Calendar.YEAR);</span><br><span class="line">System.out.println(year2+<span class="string">&quot;年&quot;</span>);<span class="comment">//2021</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="SimpleDateFormat类"><a href="#SimpleDateFormat类" class="headerlink" title="SimpleDateFormat类"></a>SimpleDateFormat类</h2><p>是一个以与语言环境有关的方式来格式化和解析日期的具体类</p>
+<p>进行格式化（日期→文本）</p>
+<p>解析（文本→日期）</p>
+<p><img src="C:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206230013293.png" alt="image-20221206230013293"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">SimpleDateFormat</span> <span class="variable">sdf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy/MM/dd&quot;</span>);</span><br><span class="line"><span class="type">Date</span> <span class="variable">date</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">System.out.println(sdf.format(date)); <span class="comment">//  2022/12/06</span></span><br><span class="line"><span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;2023/01/01&quot;</span>;</span><br><span class="line">Date date1= sdf.parse(str);</span><br><span class="line">System.out.println(date1.toString()); <span class="comment">//    Sun Jan 01 00:00:00 CST 2023</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h2><p>主要用于获取系统的属性数据和其他操作</p>
+<p>构造方法私有</p>
+<p><img src="C:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20221206230559535.png" alt="image-20221206230559535"></p>
+<ul>
+<li>arraycopy(src,srcPos,dest,destPos,length)</li>
+</ul>
+<p>src:源数组</p>
+<p>srcPos:从哪个位置开始复制</p>
+<p>dest:目标数组</p>
+<p>destPos:从哪个位置开始放</p>
+<p>length:复制长度</p>
+<ul>
+<li>currentTimeMillis()</li>
+</ul>
+<p>返回从1970-1-1到现在的毫秒数</p>
+<p>可用于计算程序运行的时间</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="https://github.com/HuoYu233">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">常用类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">1.1.</span> <span class="toc-text">Object类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#getClass-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">getClass()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hashCode-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">hashCode()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toString%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">toString方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#equals-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.4.</span> <span class="toc-text">equals()方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#finalize-%E6%96%B9%E6%B3%95"><span class="toc-number">1.1.5.</span> <span class="toc-text">finalize()方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E8%A3%85%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">包装类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2%E4%B8%8E%E8%A3%85%E7%AE%B1%E3%80%81%E6%8B%86%E7%AE%B1"><span class="toc-number">1.2.1.</span> <span class="toc-text">类型转换与装箱、拆箱</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">基本类型和字符串的转换</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Integer%E7%BC%93%E5%86%B2%E5%8C%BA"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">Integer缓冲区</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E7%B1%BB"><span class="toc-number">1.3.</span> <span class="toc-text">String类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.1.</span> <span class="toc-text">常用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-length"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">public int length()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-char-charAt-int-index"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">public char charAt(int index)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-boolean-contains-String-str"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">public boolean contains(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-char-toCharArray"><span class="toc-number">1.3.1.4.</span> <span class="toc-text">public char[] toCharArray()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-indexOf-String-str"><span class="toc-number">1.3.1.5.</span> <span class="toc-text">public int indexOf(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-int-lastIndexOf-String-str"><span class="toc-number">1.3.1.6.</span> <span class="toc-text">public int lastIndexOf(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-trim"><span class="toc-number">1.3.1.7.</span> <span class="toc-text">public String trim()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-toUpperCase"><span class="toc-number">1.3.1.8.</span> <span class="toc-text">public String toUpperCase()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-boolean-endsWith-String-str"><span class="toc-number">1.3.1.9.</span> <span class="toc-text">public boolean endsWith(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-replace-char-oldChar-char-newChar"><span class="toc-number">1.3.1.10.</span> <span class="toc-text">public String replace(char oldChar,char newChar)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#public-String-spilit-String-str"><span class="toc-number">1.3.1.11.</span> <span class="toc-text">public String[] spilit(String str)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%94%E8%BE%83"><span class="toc-number">1.3.1.12.</span> <span class="toc-text">比较</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E5%8F%98%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.3.2.</span> <span class="toc-text">可变字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BigDecimal%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">BigDecimal类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date%E7%B1%BB"><span class="toc-number">1.5.</span> <span class="toc-text">Date类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Calendar%E7%B1%BB"><span class="toc-number">1.6.</span> <span class="toc-text">Calendar类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SimpleDateFormat%E7%B1%BB"><span class="toc-number">1.7.</span> <span class="toc-text">SimpleDateFormat类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#System%E7%B1%BB"><span class="toc-number">1.8.</span> <span class="toc-text">System类</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&text=Java 常用类的学习"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&is_video=false&description=Java 常用类的学习"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Java 常用类的学习&body=Check out this article: http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&title=Java 常用类的学习"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&name=Java 常用类的学习&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.hawyior.top/Java-%E5%B8%B8%E7%94%A8%E7%B1%BB%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/&t=Java 常用类的学习"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2022-2023
+    HawYior
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/HuoYu233">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Umami Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
