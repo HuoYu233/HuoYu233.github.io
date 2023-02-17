@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta property="og:type" content="article">
+    <meta name="description" content="注解和反射注解Annotation可以被其他程序读取 内置注解 @Override @Deprecated @SuppressWarnings  元注解负责注解meta-annotation  @Target  描述注解的适用范围  @Retention  描述注解的生命周期 Runtime &gt; Class &gt; Source  @Documented  表示是否将注解生成在javado">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Java 注解与反射学习笔记">
 <meta property="og:url" content="http://www.hawyior.top/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="欢迎来到HawYior的博客">
+<meta property="og:description" content="注解和反射注解Annotation可以被其他程序读取 内置注解 @Override @Deprecated @SuppressWarnings  元注解负责注解meta-annotation  @Target  描述注解的适用范围  @Retention  描述注解的生命周期 Runtime &gt; Class &gt; Source  @Documented  表示是否将注解生成在javado">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112223010359.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112223903677.png">
+<meta property="og:image" content="c:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20230112224157605.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112232803387.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112233343412.png">
 <meta property="article:published_time" content="2023-01-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-17T07:15:07.757Z">
+<meta property="article:modified_time" content="2023-02-17T07:26:50.896Z">
 <meta property="article:author" content="HawYior">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112223010359.png">
     
     
       
@@ -103,7 +111,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84"><span class="toc-number">1.</span> <span class="toc-text">注解和反射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3Annotation"><span class="toc-number">1.1.</span> <span class="toc-text">注解Annotation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.1.</span> <span class="toc-text">内置注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">元注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.3.</span> <span class="toc-text">自定义注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84Reflection"><span class="toc-number">1.2.</span> <span class="toc-text">反射Reflection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Class%E7%B1%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">Class类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Class%E7%B1%BB%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">获取Class类实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.2.3.</span> <span class="toc-text">类初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8ClassLoader"><span class="toc-number">1.2.4.</span> <span class="toc-text">类加载器ClassLoader</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">双亲委派机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.2.5.</span> <span class="toc-text">动态创建对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E6%93%8D%E4%BD%9C%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.2.6.</span> <span class="toc-text">通过反射操作注解</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -142,7 +150,66 @@
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h1 id="注解和反射"><a href="#注解和反射" class="headerlink" title="注解和反射"></a>注解和反射</h1><h2 id="注解Annotation"><a href="#注解Annotation" class="headerlink" title="注解Annotation"></a>注解Annotation</h2><p>可以被其他程序读取</p>
+<h3 id="内置注解"><a href="#内置注解" class="headerlink" title="内置注解"></a>内置注解</h3><ul>
+<li>@Override</li>
+<li>@Deprecated</li>
+<li>@SuppressWarnings</li>
+</ul>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><p>负责注解meta-annotation</p>
+<ul>
+<li>@Target</li>
+</ul>
+<p>描述注解的适用范围</p>
+<ul>
+<li>@Retention</li>
+</ul>
+<p>描述注解的生命周期</p>
+<p>Runtime &gt; Class &gt; Source</p>
+<ul>
+<li>@Documented</li>
+</ul>
+<p>表示是否将注解生成在javadoc中</p>
+<ul>
+<li>@Inherited</li>
+</ul>
+<p>子类可以继承父类的注解</p>
+<h3 id="自定义注解"><a href="#自定义注解" class="headerlink" title="自定义注解"></a>自定义注解</h3><p>使用@interface,自动继承java.lang.annotation.Annotation</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test01</span> &#123;</span><br><span class="line">    <span class="meta">@MyAnnotation(value = &quot;hy&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="meta">@interface</span> MyAnnotation&#123;</span><br><span class="line">    <span class="comment">//注解的类型: 类型 名称();</span></span><br><span class="line">    String <span class="title function_">value</span><span class="params">()</span> <span class="keyword">default</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="反射Reflection"><a href="#反射Reflection" class="headerlink" title="反射Reflection"></a>反射Reflection</h2><p>反射方式： 实例化对象-&gt;getClass()方法-&gt;得到完整包类名称</p>
+<h3 id="Class类"><a href="#Class类" class="headerlink" title="Class类"></a>Class类</h3><p>Class c &#x3D; Class.forName(“package.class”);</p>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112223010359.png" alt="image-20230112223010359"></p>
+<h3 id="获取Class类实例"><a href="#获取Class类实例" class="headerlink" title="获取Class类实例"></a>获取Class类实例</h3><p>Person person &#x3D; new Person();</p>
+<ul>
+<li><p>Person.class</p>
+</li>
+<li><p>person.getClass()</p>
+</li>
+<li><p>Class.forName(“com.huoyu.Person”)</p>
+</li>
+<li><p>内置基本数据类型可以用类名.TYPE    (Integer.TYPE)</p>
+</li>
+<li><p>ClassLoader</p>
+</li>
+<li><p>获取父类类型 c1.getSuperClass()</p>
+</li>
+</ul>
+<hr>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112223903677.png" alt="image-20230112223903677"></p>
+<p><img src="C:\Users\LX\AppData\Roaming\Typora\typora-user-images\image-20230112224157605.png" alt="image-20230112224157605"></p>
+<hr>
+<h3 id="类初始化"><a href="#类初始化" class="headerlink" title="类初始化"></a>类初始化</h3><p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112232803387.png" alt="image-20230112232803387"></p>
+<hr>
+<h3 id="类加载器ClassLoader"><a href="#类加载器ClassLoader" class="headerlink" title="类加载器ClassLoader"></a>类加载器ClassLoader</h3><p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-%E6%B3%A8%E8%A7%A3%E4%B8%8E%E5%8F%8D%E5%B0%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230112233343412.png" alt="image-20230112233343412"></p>
+<p>根加载器无法获取(C&#x2F;C++编写)</p>
+<h4 id="双亲委派机制"><a href="#双亲委派机制" class="headerlink" title="双亲委派机制"></a>双亲委派机制</h4><blockquote>
+<p>双亲委派机制，的确是防止同名包、类与 jdk 中的相冲突，实际上加载类的时候，先通知 appLoader，看 appLoader 是否已经缓存，没有的话，appLoader 又委派给他的父类加载器(extLoader)询问，看他是不是能已经缓存加载,没有的话，extLoader 又委派他的父类加载器(bootstrapLoader)询问，BootstrapLoader看是不是自己已缓存或者能加载的，有就加载，没有再返回 extLoader，extLoader 能加载就加载，不能的话再返回给 appLoader 加载，再返回的路中，谁能加载，加载的同时也加缓存里。正是由于不停的找自己父级，所以才有 Parents 加载机制，翻译过来叫 双亲委派机制。</p>
+</blockquote>
+<h3 id="动态创建对象"><a href="#动态创建对象" class="headerlink" title="动态创建对象"></a>动态创建对象</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, InstantiationException,</span><br><span class="line">            IllegalAccessException, NoSuchMethodException, InvocationTargetException, NoSuchFieldException &#123;</span><br><span class="line">        <span class="type">Class</span> <span class="variable">c1</span> <span class="operator">=</span> Class.forName(<span class="string">&quot;AnnotationStudy.User&quot;</span>);</span><br><span class="line">        <span class="comment">//通过无参构造创建对象</span></span><br><span class="line">        <span class="type">User</span> <span class="variable">user1</span> <span class="operator">=</span> (User)c1.newInstance();</span><br><span class="line">        System.out.println(user1);</span><br><span class="line">        <span class="comment">//通过构造器创建对象</span></span><br><span class="line">        <span class="type">Constructor</span> <span class="variable">constructor</span> <span class="operator">=</span> c1.getDeclaredConstructor(String.class,<span class="type">int</span>.class);</span><br><span class="line">        <span class="type">User</span> <span class="variable">user2</span> <span class="operator">=</span> (User)constructor.newInstance(<span class="string">&quot;hy&quot;</span>,<span class="number">19</span>);</span><br><span class="line">        System.out.println(user2);</span><br><span class="line">        <span class="comment">//通过反射调用方法</span></span><br><span class="line">        <span class="comment">//invoke-&gt;激活 （对象,方法参数）</span></span><br><span class="line">        <span class="type">User</span> <span class="variable">user3</span> <span class="operator">=</span> (User)c1.newInstance();</span><br><span class="line">        <span class="type">Method</span> <span class="variable">m1</span> <span class="operator">=</span> c1.getDeclaredMethod(<span class="string">&quot;setName&quot;</span>, String.class);</span><br><span class="line">        m1.invoke(user3,<span class="string">&quot;肥香&quot;</span>);</span><br><span class="line">        System.out.println(user3.getName());</span><br><span class="line">        <span class="comment">//通过反射操作属性</span></span><br><span class="line">        <span class="type">User</span> <span class="variable">user4</span> <span class="operator">=</span> (User) c1.newInstance();</span><br><span class="line">        <span class="type">Field</span> <span class="variable">f</span> <span class="operator">=</span> c1.getDeclaredField(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        <span class="comment">//不能直接操作私有属性，关闭权限检测-&gt; 访问private</span></span><br><span class="line">        f.setAccessible(<span class="literal">true</span>);<span class="comment">//设置可以访问</span></span><br><span class="line">        f.set(user4,<span class="string">&quot;大肥猪&quot;</span>);</span><br><span class="line">        System.out.println(user4.getName());</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过反射操作注解"><a href="#通过反射操作注解" class="headerlink" title="通过反射操作注解"></a>通过反射操作注解</h3><p>&#x2F;&#x2F; TODO</p>
+
   </div>
 </article>
 
@@ -167,7 +234,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84"><span class="toc-number">1.</span> <span class="toc-text">注解和反射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3Annotation"><span class="toc-number">1.1.</span> <span class="toc-text">注解Annotation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%AE%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.1.</span> <span class="toc-text">内置注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">元注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.1.3.</span> <span class="toc-text">自定义注解</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84Reflection"><span class="toc-number">1.2.</span> <span class="toc-text">反射Reflection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Class%E7%B1%BB"><span class="toc-number">1.2.1.</span> <span class="toc-text">Class类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96Class%E7%B1%BB%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.2.2.</span> <span class="toc-text">获取Class类实例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.2.3.</span> <span class="toc-text">类初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8ClassLoader"><span class="toc-number">1.2.4.</span> <span class="toc-text">类加载器ClassLoader</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">双亲委派机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.2.5.</span> <span class="toc-text">动态创建对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E6%93%8D%E4%BD%9C%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.2.6.</span> <span class="toc-text">通过反射操作注解</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

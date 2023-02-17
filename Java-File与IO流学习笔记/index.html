@@ -6,15 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta property="og:type" content="article">
+    <meta name="description" content="File类与I&#x2F;O流https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;98094713  File 文件大小(字节)： file.length()  目录操作和删除  mkdir() 创建一级目录 mkdirs() 创建多级目录 delete() 删除空目录或文件 I&#x2F;O流原理及流的分类 四个大类都是抽象类，要创建他们的实现子类   InputStream   File">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Java File与IO流学习笔记">
 <meta property="og:url" content="http://www.hawyior.top/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="欢迎来到HawYior的博客">
+<meta property="og:description" content="File类与I&#x2F;O流https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;98094713  File 文件大小(字节)： file.length()  目录操作和删除  mkdir() 创建一级目录 mkdirs() 创建多级目录 delete() 删除空目录或文件 I&#x2F;O流原理及流的分类 四个大类都是抽象类，要创建他们的实现子类   InputStream   File">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-62650876c872cf4f13dfbfc4f8b648c1_720w.webp">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127165705606.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127170502860.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127170740445.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127171054726.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129104928148.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129113443591.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129163105300.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129174322844.png">
 <meta property="article:published_time" content="2023-01-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-17T07:13:15.650Z">
+<meta property="article:modified_time" content="2023-02-17T07:23:44.439Z">
 <meta property="article:author" content="HawYior">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-62650876c872cf4f13dfbfc4f8b648c1_720w.webp">
     
     
       
@@ -101,7 +113,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#File%E7%B1%BB%E4%B8%8EI-x2F-O%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">File类与I&#x2F;O流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#File"><span class="toc-number">1.1.</span> <span class="toc-text">File</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-x2F-O%E6%B5%81%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">I&#x2F;O流原理及流的分类</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -140,7 +152,135 @@
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h1 id="File类与I-x2F-O流"><a href="#File类与I-x2F-O流" class="headerlink" title="File类与I&#x2F;O流"></a>File类与I&#x2F;O流</h1><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/98094713">https://zhuanlan.zhihu.com/p/98094713</a></p>
+<p><img src="https://pic2.zhimg.com/80/v2-62650876c872cf4f13dfbfc4f8b648c1_720w.webp" alt="img"></p>
+<h2 id="File"><a href="#File" class="headerlink" title="File"></a>File</h2><p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127165705606.png" alt="image-20230127165705606"></p>
+<p>文件大小(字节)： file.length()</p>
+<blockquote>
+<p>目录操作和删除</p>
+</blockquote>
+<p>mkdir() 创建一级目录</p>
+<p>mkdirs() 创建多级目录</p>
+<p>delete() 删除空目录或文件</p>
+<h2 id="I-x2F-O流原理及流的分类"><a href="#I-x2F-O流原理及流的分类" class="headerlink" title="I&#x2F;O流原理及流的分类"></a>I&#x2F;O流原理及流的分类</h2><p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127170502860.png" alt="image-20230127170502860"></p>
+<p>四个大类都是抽象类，要创建他们的实现子类</p>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127170740445.png" alt="image-20230127170740445"></p>
+<blockquote>
+<p>InputStream</p>
+</blockquote>
+<ul>
+<li>FileInputStream 文件输入流</li>
+<li>BufferedInputStream 缓冲字节输入流</li>
+<li>BojectInputStream 对象字节输入流</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230127171054726.png" alt="image-20230127171054726"></p>
+<blockquote>
+<p>FileInputStream</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;e:\\fileinput.txt&quot;</span>;</span><br><span class="line"><span class="comment">//hello,world!!!</span></span><br><span class="line">      <span class="type">FileInputStream</span> <span class="variable">in</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">          in = <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(path);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">          e.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="comment">//in.read(); 一个一个字节读取</span></span><br><span class="line"><span class="comment">//in.read(byte[] b) 按照b的长度读取字节数</span></span><br><span class="line">      <span class="type">byte</span>[] b = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">4</span>];</span><br><span class="line">      <span class="type">int</span> <span class="variable">readLen</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">while</span>((readLen = in.read(b)) != -<span class="number">1</span>)&#123;</span><br><span class="line">          <span class="comment">//等于-1 说明后面没有内容</span></span><br><span class="line">          System.out.println(<span class="keyword">new</span> <span class="title class_">String</span>(b,<span class="number">0</span>,readLen));</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">//4个字节读取一次 </span></span><br><span class="line"><span class="comment">//hell</span></span><br><span class="line"><span class="comment">//o,wo</span></span><br><span class="line"><span class="comment">//rld!</span></span><br><span class="line"><span class="comment">//!!</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>FileOutputStream</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;e:\\fileoutput.txt&quot;</span>;</span><br><span class="line">      <span class="type">FileOutputStream</span> <span class="variable">out</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">          out = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(path);</span><br><span class="line">          <span class="comment">//没有文件 自动创建文件</span></span><br><span class="line">      &#125; <span class="keyword">catch</span> (FileNotFoundException e) &#123;</span><br><span class="line">          e.printStackTrace();</span><br><span class="line">      &#125;</span><br><span class="line">      out.write(<span class="string">&#x27;Y&#x27;</span>);</span><br><span class="line">      <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;\nsb邓标涌&quot;</span>;</span><br><span class="line">      out.write(str.getBytes(StandardCharsets.UTF_8));</span><br><span class="line"><span class="comment">//str.getBytes() 字符串-&gt;字符数组</span></span><br><span class="line"><span class="comment">//中文不乱码</span></span><br><span class="line">out.close();</span><br><span class="line"><span class="comment">//记得关流</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果要追加，构造方法可以设置append &#x3D; true</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">out = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(path,<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>文件拷贝</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">oriPath</span> <span class="operator">=</span> <span class="string">&quot;e:\\nukkit-1.0-SNAPSHOT (1).jar&quot;</span>;</span><br><span class="line">      <span class="type">String</span> <span class="variable">toPath</span> <span class="operator">=</span> <span class="string">&quot;e:\\I_am_copy.jar&quot;</span>;</span><br><span class="line">      FileInputStream in;</span><br><span class="line">      FileOutputStream out;</span><br><span class="line">      <span class="type">byte</span>[] buff = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="number">1024</span>];</span><br><span class="line">      in = <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(oriPath);</span><br><span class="line">      out = <span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(toPath);</span><br><span class="line">      <span class="type">int</span> <span class="variable">readLen</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">      <span class="type">long</span> <span class="variable">from</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">      <span class="keyword">while</span> ((readLen = in.read(buff)) != -<span class="number">1</span>) &#123;</span><br><span class="line">          out.write(buff, <span class="number">0</span>, readLen);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="type">long</span> <span class="variable">to</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">      System.out.println(<span class="string">&quot;拷贝完成，用时:&quot;</span> + (to - from) + <span class="string">&quot;ms&quot;</span>);</span><br><span class="line">      out.close();</span><br><span class="line">      in.close();</span><br></pre></td></tr></table></figure>
+
+<hr>
+<blockquote>
+<p>FileWriter和FileReader</p>
+</blockquote>
+<ul>
+<li>用于读取字符，与FileIn&#x2F;OutputStream类似</li>
+</ul>
+<p>！ FileWrite使用完必须及时close() 或者flush()</p>
+<p>可以直接写字符串</p>
+<blockquote>
+<p>节点流和处理流</p>
+</blockquote>
+<ul>
+<li>节点流可以从一个特定的数据源读取数据，如FileReader FileWriter</li>
+<li>处理流（包装流）式连接在已存在的流（节点流或处理流之上），提供更强大的读写功能，如BufferReader，BufferWriter</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129104928148.png" alt="image-20230129104928148"></p>
+<blockquote>
+<p>BufferedReader和BufferedWriter</p>
+</blockquote>
+<ul>
+<li>字符流</li>
+<li>关闭时，只需要关闭外层流</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;e:\\fileinput.txt&quot;</span>;</span><br><span class="line">      <span class="type">BufferedReader</span> <span class="variable">bufferedReader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferedReader</span>(<span class="keyword">new</span> <span class="title class_">FileReader</span>(path));</span><br><span class="line">      String line;</span><br><span class="line">      <span class="comment">// 等于null 读取结束</span></span><br><span class="line">      <span class="keyword">while</span>((line = bufferedReader.readLine()) != <span class="literal">null</span>)&#123;</span><br><span class="line">          System.out.println(line);</span><br><span class="line">      &#125;</span><br><span class="line">      bufferedReader.close();</span><br><span class="line">      <span class="comment">//底层自动关闭内部的FileReader</span></span><br></pre></td></tr></table></figure>
+
+<p>不要操作二进制文件，否则可能会造成文件损坏</p>
+<blockquote>
+<p>BufferedInputStream&#x2F;BufferedOutputStream</p>
+</blockquote>
+<p>读取字节的包装流</p>
+<blockquote>
+<p>对象流ObjectInputStream&#x2F;ObjectOutputStream</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129113443591.png" alt="image-20230129113443591"></p>
+<p>推荐implements Serializable</p>
+<p>Externalizable接口有方法需要实现</p>
+<ul>
+<li>序列化</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">path</span> <span class="operator">=</span> <span class="string">&quot;e:\\data.dat&quot;</span>;</span><br><span class="line">        <span class="type">ObjectOutputStream</span> <span class="variable">oss</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectOutputStream</span>(<span class="keyword">new</span> <span class="title class_">FileOutputStream</span>(path));</span><br><span class="line">        oss.write(<span class="number">100</span>);</span><br><span class="line">        oss.writeBoolean(<span class="literal">true</span>);</span><br><span class="line">        oss.writeChar(<span class="string">&#x27;6&#x27;</span>);</span><br><span class="line">        oss.writeObject(<span class="keyword">new</span> <span class="title class_">Dog</span>(<span class="string">&quot;二哈&quot;</span>,<span class="number">10</span>));</span><br><span class="line">        oss.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Dog</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>反序列化</p>
+<ul>
+<li><p>读取（反序列化）顺序需要和保存数据（序列化）的顺序一致</p>
+</li>
+<li><p>否则会出现异常</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129163105300.png" alt="image-20230129163105300"></p>
+<blockquote>
+<p>标准输入输出</p>
+</blockquote>
+<p>System.in</p>
+<p>System.out</p>
+<blockquote>
+<p>转换流</p>
+</blockquote>
+<p>乱码</p>
+<p>字节流与字符流转化</p>
+<p>-&gt; 指定读取的编码方式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">InputStreamReader</span> <span class="variable">isr</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">InputStreamReader</span>(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(path), StandardCharsets.UTF_8);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打印流PrintStream PrintWriter</p>
+</blockquote>
+<p>只有输出流，没有输入流</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.setOut(<span class="keyword">new</span> <span class="title class_">PrintStream</span>(path));</span><br><span class="line">可以设置sout的输出位置</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>配置文件.properties</p>
+</blockquote>
+<p><img src="https://raw.githubusercontent.com/HuoYu233/HuoYu233.github.io/master/Java-File%E4%B8%8EIO%E6%B5%81%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20230129174322844.png" alt="image-20230129174322844"></p>
+<ul>
+<li>读取</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Properties</span> <span class="variable">properties</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">      properties.load(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(path));</span><br><span class="line">      properties.list(System.out);</span><br><span class="line">      System.out.println(<span class="string">&quot;===========&quot;</span>);</span><br><span class="line">      System.out.println(properties.getProperty(<span class="string">&quot;password&quot;</span>));</span><br><span class="line">      System.out.println(properties.getProperty(<span class="string">&quot;ip&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Properties</span> <span class="variable">properties</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">      properties.load(<span class="keyword">new</span> <span class="title class_">FileInputStream</span>(path));</span><br><span class="line">      properties.setProperty(<span class="string">&quot;ip&quot;</span>,<span class="string">&quot;127.0.0.1&quot;</span>);</span><br><span class="line">      properties.store(<span class="keyword">new</span> <span class="title class_">FileWriter</span>(path),<span class="literal">null</span>);</span><br><span class="line"><span class="comment">//注释 null</span></span><br></pre></td></tr></table></figure>
+
+
   </div>
 </article>
 
@@ -165,7 +305,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#File%E7%B1%BB%E4%B8%8EI-x2F-O%E6%B5%81"><span class="toc-number">1.</span> <span class="toc-text">File类与I&#x2F;O流</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#File"><span class="toc-number">1.1.</span> <span class="toc-text">File</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#I-x2F-O%E6%B5%81%E5%8E%9F%E7%90%86%E5%8F%8A%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">1.2.</span> <span class="toc-text">I&#x2F;O流原理及流的分类</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
