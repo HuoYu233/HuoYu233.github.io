@@ -470,12 +470,13 @@
 <li>特征筛选，选择特征的一个子集</li>
 <li>正则化(Regularization)：在维持多项式回归的基础上，减小参数$w_j$的值，减小一些特征的影响</li>
 </ul>
-<h3 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h3><p>如果不知道哪个特征是重要的，惩罚所有特征，防止过拟合</p>
+<h3 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h3><p>如果不知道哪个特征是重要的，一般惩罚所有特征，防止过拟合</p>
 <p>$J(w,b) = \frac{1}{2m} \sum<em>{i=1}^{m} {(y^i-\hat{y})}^2 + \frac{\lambda}{\alpha m}\sum</em>{j=1}^{n} {w_j}^2$</p>
 <p>其中$\lambda$为正则化参数，$\alpha$为学习率，缩放得</p>
 <p>$J(w,b) = \frac{1}{2m} \sum<em>{i=1}^{m} {(y^i-\hat{y})}^2 + \frac{\lambda}{2 m}\sum</em>{j=1}^{n} {w_j}^2$</p>
+<p>这样使得$w_j$尽可能小，几乎为0</p>
 <p>参数$b$是否正则化无关紧要</p>
-<p><strong>需要选择合适的$\lambda$</strong></p>
+<p><strong>需要选择合适的$\lambda$</strong>，太大趋于直线，太小惩罚效果不明显</p>
 <ul>
 <li>正则化线性回归</li>
 </ul>
@@ -506,7 +507,7 @@
 <p>$L(f<em>{w,b}(x^{(i)},y^{(i)})=-y^{(i)} log(f</em>{w,b}(x^{(i)})) - (1-y^{(i)})log(1-f_{w,b}(x^{(i)}))$</p>
 <p>通过反向传播计算偏导数</p>
 <h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>用<code>ReLU</code>函数代替<code>sigmoid</code>激活，$g(z) = max(0,z)$</p>
-<p><strong>图五</strong></p>
+<p><strong>图</strong></p>
 <p><strong>如何选择合适的激活函数？</strong></p>
 <p>取决于要预测的y</p>
 <ul>
