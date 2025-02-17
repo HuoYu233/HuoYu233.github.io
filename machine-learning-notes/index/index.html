@@ -188,7 +188,7 @@
     <div class="drawer-box-head bg-color">
       <img class="drawer-box-head_logo lazyload placeholder" src="/img/favicon.ico" class="lazyload placeholder" data-srcset="/img/favicon.ico" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
       <h3 class="drawer-box-head_title">Blog of Kaz</h3>
-      <h5 class="drawer-box-head_desc"></h5>
+      <h5 class="drawer-box-head_desc">hhh</h5>
     </div>
     
     <div class="drawer-box-content">
@@ -395,7 +395,7 @@
 <ul>
 <li>梯度下降时建议<strong>同步</strong>梯度下降，如下图</li>
 </ul>
-<p><img src="\img\machine-learning-notes\pic-1.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-1.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>如果$\alpha$太小，可以得到答案，但是时间过长</p>
 <p>如果$\alpha$太大，大交叉无法收敛，甚至发散</p>
 <p>当参数值每次更新时，$J(w,b)$变小，导数项（斜率）也会变小，对于固定学习率$\alpha$，步长也会变小，从而达到局部最优解</p>
@@ -412,7 +412,7 @@
 <p><strong>矢量化</strong>：利用计算机的并行硬件，代码简洁、运行速度快</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f = np.dot(w, x) + b</span><br></pre></td></tr></table></figure>
 <p><strong>多元线性回归的梯度下降</strong></p>
-<p><img src="\img\machine-learning-notes\pic-2.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-2.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>PS: 正规方程：某些机器学习库在后端求$w,b$的方法，<strong>只适用于线性回归</strong>，而且速度慢，不要求掌握</p>
 <h3 id="特征缩放"><a href="#特征缩放" class="headerlink" title="特征缩放"></a>特征缩放</h3><p>不同特征的估计值范围差异很大，梯度下降等高线图可能某些轴范围宽某些窄，梯度下降过程中可能波 动</p>
 <p>加快梯度下降速度</p>
@@ -452,10 +452,10 @@
 <p>定义$J(w,b)=\frac{1}{m}\sum<em>{i-1}^{m}L(f</em>{w,b}(x^{(i)},y^{(i)})$</p>
 <p>其中L代表单个样例的loss，J代表总的cost</p>
 <p>$L(f<em>{w,b}(x^{(i)},y^{(i)})=-log(f</em>{w,b}(x^{(i)})) \quad if \quad y^{(i)}=1$</p>
-<p><img src="\img\machine-learning-notes\pic-3.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-3.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>当y等于1，预测值越靠近1损失越小</p>
 <p>$L(f<em>{w,b}(x^{(i)},y^{(i)})=-log(1-f</em>{w,b}(x^{(i)})) \quad if \quad y^{(i)}=0$</p>
-<p><img src="\img\machine-learning-notes\pic-4.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-4.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>当y等于0，预测值越靠近0损失越小 </p>
 <p><strong>简化</strong>成本函数                                                                                                                                                                                                                                                                                          </p>
 <p>$L(f<em>{w,b}(x^{(i)},y^{(i)})=-y^{(i)} log(f</em>{w,b}(x^{(i)})) - (1-y^{(i)})log(1-f_{w,b}(x^{(i)}))$</p>
@@ -468,7 +468,7 @@
 <p>其中$f(x^i) = \frac{1}{1+e^{-(\vec{w} · \vec{x}+b)}}$</p>
 <p>可以使用相似方法进行特征缩放</p>
 <h3 id="过拟合问题"><a href="#过拟合问题" class="headerlink" title="过拟合问题"></a>过拟合问题</h3><p>过拟合虽然可能完美通过训练集，但是有高方差，泛化能力差。应该避免欠拟合（高偏差high bias）和过拟合（高方差high variance）。</p>
-<p><img src="\img\machine-learning-notes\pic-5.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-5.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p><strong>解决过拟合</strong></p>
 <ul>
 <li>收集更多训练数据</li>
@@ -494,7 +494,7 @@
 <p>$J(w,b) = -\frac{1}{m} (y^{(i)} log(f<em>{w,b}(x^{(i)})) + (1-y^{(i)})log(1-f</em>{w,b}(x^{(i)})))+ \frac{\lambda}{2 m}\sum_{j=1}^{n} {w_j}^2$</p>
 <p>求导式和线性回归相同，只是需要注意<strong>正则化项偏导数没有求和</strong></p>
 <p>$f(x^i) = \frac{1}{1+e^{-(\vec{w} · \vec{x}+b)}}$</p>
-<p><img src="\img\machine-learning-notes\pic-6.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-6.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <h1 id="Course-2"><a href="#Course-2" class="headerlink" title="Course 2"></a>Course 2</h1><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>起源于设计算法来模拟人脑活动（但无需过于重视深度学习的生物动机），21世纪定义为<strong>深度学习</strong></p>
 <p>利用别人训练的神经网络参数称为推理或者预测</p>
 <p>为了简化表达使用全连接，一层可以使用上一层的所有特征，对于不重要的特征可以选择适当的参数</p>
@@ -504,9 +504,9 @@
 <p>每一层输入向量$\vec{x}$或$\vec{a}_{i-1}$，经过当前层中多个神经元的逻辑回归处理，输出新的向量$\vec{a}^{[l]}$，进入到下一层/输出结果</p>
 <p>即$a_j^{[l]} = g(\vec{w}_j^{[l]} \cdot \vec{a}^{[l-1]} + b_j^{[l]})$</p>
 <p>$j$表示神经元单元序号，$l$表示层数，$g(x)$为<code>sigmod</code>函数</p>
-<p><img src="\img\machine-learning-notes\pic-7.jpg" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-7.jpg" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>$a_j^{[l]}$构成$\vec{a}^{[l]}$</p>
-<p><img src="\img\machine-learning-notes\pic-8.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-8.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-8.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <h2 id="前向传播-forward-prop"><a href="#前向传播-forward-prop" class="headerlink" title="前向传播(forward prop)"></a>前向传播(forward prop)</h2><p>从输入初步传递到输出，即为前向传播</p>
 <p><strong>一般实现</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">dense</span>(<span class="params">a_in, W, b, g</span>):</span><br><span class="line">	units = W.shape[<span class="number">1</span>] <span class="comment"># 单元数等于W矩阵的列数，w_j向量是列向量</span></span><br><span class="line">	a_out = np.zeros(units)</span><br><span class="line">	<span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(units):</span><br><span class="line">		w = W[:, j]</span><br><span class="line">		z = np.dot(w, a_in) + b</span><br><span class="line">		a_out[j] = g(z)</span><br><span class="line">	<span class="keyword">return</span> a_out</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sequential</span>(<span class="params">x</span>):</span><br><span class="line">    a1 = dense(x, W1, b1)</span><br><span class="line">    a2 = dense(a1, W2, b2)</span><br><span class="line">    a3 = dense(a2, W3, b3)</span><br><span class="line">    f_x = a3</span><br><span class="line">    <span class="keyword">return</span> f_x</span><br></pre></td></tr></table></figure>
@@ -520,7 +520,7 @@
 <p>$L(f<em>{w,b}(x^{(i)},y^{(i)})=-y^{(i)} log(f</em>{w,b}(x^{(i)})) - (1-y^{(i)})log(1-f_{w,b}(x^{(i)}))$</p>
 <p>通过反向传播计算偏导数</p>
 <h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>用<code>ReLU</code>函数代替<code>sigmoid</code>激活，$g(z) = max(0,z)$</p>
-<p><img src="\img\machine-learning-notes\pic-9.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-9.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-9.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p><strong>如何选择合适的激活函数？</strong></p>
 <p>取决于要预测的y，对于神经网络的<strong>输出层</strong>：</p>
 <ul>
@@ -568,7 +568,7 @@
 <p>需要概率时再调用<code>softmax</code></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">logits = model(X)</span><br><span class="line">f_x = tf.nn.softmax(logits)</span><br></pre></td></tr></table></figure>
 <p><strong>多标签分类</strong></p>
-<p><img src="\img\machine-learning-notes\pic-10.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-10.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-10.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-10.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>将每个标签看做一个二分类问题，输出层n个logistic函数，输出的y是一个向量。</p>
 <h2 id="高级优化方法"><a href="#高级优化方法" class="headerlink" title="高级优化方法"></a>高级优化方法</h2><p>传统的梯度下降学习率固定</p>
 <h3 id="Adam（Adaptive-Moment-estimation）"><a href="#Adam（Adaptive-Moment-estimation）" class="headerlink" title="Adam（Adaptive Moment estimation）"></a>Adam（Adaptive Moment estimation）</h3><p>如果看到学习率太小，而多次向同一个方向下降，会自动加大学习率</p>
@@ -586,7 +586,7 @@
 <h2 id="构建机器学习系统"><a href="#构建机器学习系统" class="headerlink" title="构建机器学习系统"></a>构建机器学习系统</h2><h3 id="评估一个模型"><a href="#评估一个模型" class="headerlink" title="评估一个模型"></a>评估一个模型</h3><p>特征只有一到二个还可以通过画图判断过拟合或者欠拟合，但是再多的特征就不适用了。</p>
 <p>将数据集分为训练集和测试集（73或者82开）</p>
 <p>分三步计算</p>
-<p><img src="\img\machine-learning-notes\pic-11.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-11.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-11.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-11.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p><strong>注意计算error时不包括正则化项</strong></p>
 <p>过拟合$J<em>{train}$很低，$J</em>{test}$很高，很好地评估模型的泛化能力</p>
 <p>对于分类问题，error就不再用交叉熵损失，直接用算法正确或者错误分类的个数（准确率accurate rate）</p>
@@ -594,40 +594,158 @@
 <p>交叉验证集交叉检查不同模型的有效性和准确性，cross validation也叫<strong>dev set</strong>/validation set</p>
 <p>$J<em>{train}$优化参数，$J</em>{cv}$选择模型，也叫优化超参数，$J_{test}$评估模型的泛化能力</p>
 <p>数据样本不够时622开可以，但是数据样本够的时候后两者不宜太多。</p>
-<h3 id="偏差和方差"><a href="#偏差和方差" class="headerlink" title="偏差和方差"></a><strong>偏差和方差</strong></h3><p><img src="\img\machine-learning-notes\pic-12.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-12.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<p><img src="\img\machine-learning-notes\pic-13.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-13.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h3 id="偏差和方差"><a href="#偏差和方差" class="headerlink" title="偏差和方差"></a><strong>偏差和方差</strong></h3><p><img src="/img/machine-learning-notes/pic-12.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-12.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-13.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-13.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>高偏差意味着在训练集上表现不好，高方差意味着在交叉验证集表现比训练集上差得多</p>
 <p>高方差和高偏差同时存在是有可能的，大部分在神经网络中，线性回归不太可能。</p>
 <p><strong>正则化项参数对偏差和方差的影响：</strong></p>
-<p><img src="\img\machine-learning-notes\pic-14.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-14.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-14.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-14.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>但是这些数值多少才算大/小呢？需要<strong>建立基准性能标准</strong>，通常是衡量人类在这项任务做的有多好。另一种估计性能基线水平的方法是，是否有一些前人实现的算法来建立性能的基线水平。通过自己的模型效果和基准的比较判断是否有高方差/高偏差的问题</p>
-<p><img src="\img\machine-learning-notes\pic-15.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-15.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-15.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-15.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p><strong>学习曲线</strong></p>
-<p><img src="\img\machine-learning-notes\pic-16.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-16.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-16.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-16.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>高偏差时 </p>
-<p><img src="\img\machine-learning-notes\pic-17.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-17.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-17.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-17.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>高方差时</p>
-<p><img src="\img\machine-learning-notes\pic-18.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-18.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<p><img src="\img\machine-learning-notes\pic-19.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-19.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-18.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-18.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><img src="/img/machine-learning-notes/pic-19.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-19.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>判断高方差或者高偏差决定下一步怎么做</p>
 <p><strong>神经网络中的偏差和方差</strong></p>
 <p>大型的神经网络有很小的偏差，所以只需要关注方差</p>
 <p>并且在合适的正则化下，大型神经网络也会和更小的神经网络工作的一样好甚至更好</p>
 <p>但是大型网络计算比较昂贵</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">layer = Dense(unit=<span class="number">25</span>, activation=<span class="string">&quot;relu&quot;</span>, kernel_regularizer=L2(<span class="number">0.01</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="开发机器学习系统的迭代"><a href="#开发机器学习系统的迭代" class="headerlink" title="开发机器学习系统的迭代"></a>开发机器学习系统的迭代</h2><p><img src="\img\machine-learning-notes\pic-20.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-20.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<h3 id="误差分析"><a href="#误差分析" class="headerlink" title="误差分析"></a>误差分析</h3><p>在交叉验证集手动选出几个（几百个）分类错误的例子，计数，归类几个原因，找到比较多的错误分类类型，更新学习算法</p>
-<h3 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h3><p>由误差分析，可以针对性地选择一些特定的数据，对于图像和语音识别，常用<strong>数据增强</strong>，用原有的数据样本创造新的样本</p>
+<h2 id="开发机器学习系统的迭代"><a href="#开发机器学习系统的迭代" class="headerlink" title="开发机器学习系统的迭代"></a>开发机器学习系统的迭代</h2><p><img src="/img/machine-learning-notes/pic-20.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-20.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h2 id="误差分析"><a href="#误差分析" class="headerlink" title="误差分析"></a>误差分析</h2><p>在交叉验证集手动选出几个（几百个）分类错误的例子，计数，归类几个原因，找到比较多的错误分类类型，更新学习算法</p>
+<h2 id="添加数据"><a href="#添加数据" class="headerlink" title="添加数据"></a>添加数据</h2><p>由误差分析，可以针对性地选择一些特定的数据，对于图像和语音识别，常用<strong>数据增强</strong>，用原有的数据样本创造新的样本</p>
 <p>例如旋转，放大，缩小图片，更改图片对比度，扭曲图片，对输入的x施加失真或变换。对语音添加背景噪声等</p>
 <p>此外还有<strong>数据合成</strong>，对于OCR文字识别，可以在真实图片基础上，更改字体，生成新的数据。一般在计算机视觉</p>
 <p>AI = Code(algorithm/model) + Data</p>
-<h3 id="迁移学习（Transfer-Learning）"><a href="#迁移学习（Transfer-Learning）" class="headerlink" title="迁移学习（Transfer Learning）"></a>迁移学习（Transfer Learning）</h3><p>对于神经网络，假设要进行0-9分类，但是数据集很小，可以借用有一个很大数据集的猫狗等1000类分类的神经网络，使用其中除了输出层以外的所有参数。</p>
-<p><img src="\img\machine-learning-notes\pic-21.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-21.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h2 id="迁移学习（Transfer-Learning）"><a href="#迁移学习（Transfer-Learning）" class="headerlink" title="迁移学习（Transfer Learning）"></a>迁移学习（Transfer Learning）</h2><p>对于神经网络，假设要进行0-9分类，但是数据集很小，可以借用有一个很大数据集的猫狗等1000类分类的神经网络，使用其中除了输出层以外的所有参数。</p>
+<p><img src="/img/machine-learning-notes/pic-21.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-21.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
 <p>第一步叫做<strong>监督预训练</strong>(supervised pretraining)，获得除了输出层以外的层的权重；第二步叫做<strong>微调</strong>(fine tuning)，更改输出层的权重</p>
 <p>这样就可以在一个只有很小数据集的训练中，通过别的有很大数据集的不太相关的任务中学习</p>
 <p>通常下载别人预训练好并开源的神经网络，微调输出层参数来很好地学习自己的任务，但是输入x的类型（图片、音频、文本）也要和预训练模型一样</p>
-<p><img src="\img\machine-learning-notes\pic-22.png" class="lazyload placeholder" data-srcset="\img\machine-learning-notes\pic-22.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-
+<p><img src="/img/machine-learning-notes/pic-22.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-22.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h2 id="机器学习项目的完整周期"><a href="#机器学习项目的完整周期" class="headerlink" title="机器学习项目的完整周期"></a>机器学习项目的完整周期</h2><p><img src="/img/machine-learning-notes/pic-23.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-23.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>部署</p>
+<p><img src="/img/machine-learning-notes/pic-24.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-24.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>MLOps(Machine Learning operations)：机器学习运维，系统构建，部署，维护机器学习系统的实践活动来确保机器学习系统可靠，监测损耗和及时更新。</p>
+<h2 id="关注公平、偏见、伦理"><a href="#关注公平、偏见、伦理" class="headerlink" title="关注公平、偏见、伦理"></a>关注公平、偏见、伦理</h2><h2 id="倾斜数据集的误差指标"><a href="#倾斜数据集的误差指标" class="headerlink" title="倾斜数据集的误差指标"></a>倾斜数据集的误差指标</h2><p>某个系统的正例和负例不一定都是对半开，例如判断某个稀有的病，构造<strong>混淆矩阵</strong>，包括<strong>真正例，假正例，真负例，假负例</strong></p>
+<p>常用的计算指标是<strong>精确度(precision)</strong>和<strong>召回率(recall)</strong></p>
+<p><img src="/img/machine-learning-notes/pic-25.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-25.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>精确度展示预测出的的真实精确程度，召回率展示实际真实中预测出的精确程度</p>
+<p>权衡：</p>
+<p>当我们只有十分确信时才设置y=1，设置logistic门槛为大于0.5，会导致精确度提高，召回率降低</p>
+<p>当我们不希望错过实际上的y=1，设置logistic门槛为小于0.5，导致精确度降低，召回率提高</p>
+<p>通过设置threshold权衡precision和recall</p>
+<p>F1 score：自动组合精确度和召回率，选择最佳值，强调有比较低的值的算法（可能效果不好）</p>
+<p>$F1 score = \frac{1}{\frac{1}{2}(\frac{1}{P}+\frac{1}{R})} = 2\frac{PR}{P+R}$</p>
+<h2 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h2><p>决策树是一种树形结构，其中每个内部节点表示一个属性上的测试，每个分支代表一个测试输出，每个叶节点代表一种类别。</p>
+<p><img src="/img/machine-learning-notes/pic-26.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-26.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p><strong>决策树学习</strong>：</p>
+<ul>
+<li>如果选择每个节点选择什么特征来分类？</li>
+</ul>
+<p>应该最大化纯度，每一边的种类尽可能少</p>
+<ul>
+<li>什么时候停止分类？</li>
+</ul>
+<p>当一个节点100%是一个种类</p>
+<p>当分裂节点时会导致树超过最大高度（超参数）</p>
+<p>当提高的纯度分数低于一个门槛值</p>
+<p>当一个节点的样本数量低于一个门槛值</p>
+<h3 id="衡量纯度（purity）"><a href="#衡量纯度（purity）" class="headerlink" title="衡量纯度（purity）"></a>衡量纯度（purity）</h3><p>熵是对一组数据杂质的度量，$p_1$是目标种类数量在总数量得到占比，$p_0 = 1 - p_1$</p>
+<p>$H(p_1)=-p_1log_2(p_1)-p_0log_2(p_0) = -p_1log_2(p_1)-(1-p_1)log_2(1-p_1)$</p>
+<p>注意：$0log(0) = 0$</p>
+<p><img src="/img/machine-learning-notes/pic-27.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-27.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<h3 id="减小熵：信息增益（Information-Gain）"><a href="#减小熵：信息增益（Information-Gain）" class="headerlink" title="减小熵：信息增益（Information Gain）"></a>减小熵：信息增益（Information Gain）</h3><p>当选择一个节点选择什么特征时，计算左右分支的熵，并进行加权平均计算，选择有最小结果的特征</p>
+<p>实际上是测量熵的减小量，由根节点原来的熵值$H(p)$减去左右分支的加权平均熵，此时选择更大的值</p>
+<p>为什么？当熵减小的量很小时，可以选择不分裂，而避免过拟合</p>
+<p><img src="/img/machine-learning-notes/pic-28.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-28.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>更一般地</p>
+<p><img src="/img/machine-learning-notes/pic-29.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-29.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>p是当前节点样本中正例的个数，w是从上一节点样本中选择的样本数（当前样本/上一节点样本）</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在根节点以所有数据样本开始</p>
+<p>计算所有特征的信息增益，选择最大的</p>
+<p>对选择的特征分裂，创建左右分支</p>
+<p>保持分裂直到遇到终止条件：</p>
+<ul>
+<li>当一个节点100%是一个类</li>
+<li>当分裂节点会导致树超过最大高度</li>
+<li>信息增益的值小于某个门槛值</li>
+<li>节点的样本数量小于某个门槛值</li>
+</ul>
+<p>实际上是一个递归的过程</p>
+<h3 id="独热编码-One-Hot-Encoding"><a href="#独热编码-One-Hot-Encoding" class="headerlink" title="独热编码(One Hot Encoding)"></a>独热编码(One Hot Encoding)</h3><p>实现有两个以上离散值的特征：如果一个类的特征有k个离散值，创建k个二元特征（0/1）</p>
+<p>这样又转变为原来的左右分支分裂的情况</p>
+<h3 id="连续值特征"><a href="#连续值特征" class="headerlink" title="连续值特征"></a>连续值特征</h3><p>选定一个阈值，判断数据样本大于或者小于该阈值</p>
+<p>分割点将训练样本排序后取每对的中间值，10个样本就有9个分割点</p>
+<p>对分割点分别计算信息增强来选择阈值</p>
+<h3 id="回归树"><a href="#回归树" class="headerlink" title="回归树"></a>回归树</h3><p>分裂时，改成尽量选取输出的方差(Variance)小的特征</p>
+<p>w还是从上一节点样本中选择的样本数（当前样本/上一节点样本），之后计算加权平均方差</p>
+<p>再用上一个节点所有数据的方差减去加权平均方差，选取最大的</p>
+<p>分类的结果是样本的平均值</p>
+<h2 id="使用多个决策树"><a href="#使用多个决策树" class="headerlink" title="使用多个决策树"></a>使用多个决策树</h2><p>单一决策树对数据中的微小变化十分敏感，所以要建立多个决策树（Tree Ensemble），并进行投票，使得算法更加健壮</p>
+<h3 id="放回抽样"><a href="#放回抽样" class="headerlink" title="放回抽样"></a>放回抽样</h3><p>从n个样本中放回地抽取n次，结果作为一个新的数据集</p>
+<h3 id="随机森林（Random-Forest）"><a href="#随机森林（Random-Forest）" class="headerlink" title="随机森林（Random Forest）"></a>随机森林（Random Forest）</h3><p>给定一个训练样本数m，进行b次的训练（一般不超过100），每次放回抽样创建一个新的大小为m的数据集，在此基础上训练一个决策树</p>
+<p>b个决策树构成袋状决策树（Bagged Decision Tree），输出结果进行投票决定最终输出</p>
+<p>对于每个节点，当要选择一个特征来分裂的时候，如果有n个特征可用，随机选择一个$k &lt; n$大小子集，使得算法只从这个子集里的特征选择信息增益最高得到特征进行分裂，当n很大时，经验做法是取$k = \sqrt{n}$</p>
+<h3 id="XGBoost（eXtreme-Gradient-Boosting）"><a href="#XGBoost（eXtreme-Gradient-Boosting）" class="headerlink" title="XGBoost（eXtreme Gradient Boosting）"></a>XGBoost（eXtreme Gradient Boosting）</h3><p>极端梯度提升树，与前面不同的是，进行放回抽样的时候，不是让每个样本有$\frac{1}{m}$的概率被抽中，而是更可能抽到前面训练的树错误匹配的样本</p>
+<p>思想：关注我们已经训练好的树做的不好的地方，在之后刻意地尝试优化这部分</p>
+<ul>
+<li>提升树的开源实现</li>
+<li>快速，有效</li>
+<li>很好的设定结束分裂的标准</li>
+<li>内置正则化</li>
+</ul>
+<h3 id="什么时候使用决策树"><a href="#什么时候使用决策树" class="headerlink" title="什么时候使用决策树"></a>什么时候使用决策树</h3><p>一个或多个决策树</p>
+<ul>
+<li>在表格化和结构化的数据上工作的很好</li>
+<li>不建议在非结构化的数据上，例如图片，音频，文本</li>
+<li>训练快速</li>
+<li>决策树是人类可以理解的（可解释性）</li>
+</ul>
+<p>神经网络</p>
+<ul>
+<li>对于所有类型的数据都能工作的很好</li>
+<li>比决策树更慢</li>
+<li><p>可以很好地使用迁移学习（预训练+微调）</p>
+</li>
+<li><p>当建立一个有多个模型一起工作的系统，链接神经网络会更简单（输出都是光滑的，连在一起仍然可微，决策树一次只能训练一个）</p>
+</li>
+</ul>
+<h1 id="Course-3"><a href="#Course-3" class="headerlink" title="Course 3"></a>Course 3</h1><p>除了监督学习，机器学习还包括</p>
+<ul>
+<li>无监督学习<ul>
+<li>聚类</li>
+<li>异常检测</li>
+</ul>
+</li>
+<li>推荐系统</li>
+<li>强化学习</li>
+</ul>
+<h2 id="聚类"><a href="#聚类" class="headerlink" title="聚类"></a>聚类</h2><p>一堆数据点中自动查找相互关联或者相似的数据点</p>
+<h3 id="K-means"><a href="#K-means" class="headerlink" title="K-means"></a>K-means</h3><p>首先随机初始化K个簇中心点$\mu_1 ,\mu_2… \mu_k$，$\mu$应该是一个向量，与输入有相同的维度</p>
+<ul>
+<li>将每个点分配给离他最近的中心点（centroid质心）</li>
+<li>将中心点移动到分配的点的平均中心</li>
+<li>重复前两步，直到中心点不再移动，K-means算法收敛</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Repeat&#123;</span><br><span class="line">	<span class="keyword">for</span> i = 1 to m</span><br><span class="line">		c_i 是距离x_i点最近得到簇中心点的下标（从1-k）</span><br><span class="line">		//其中距离为 min_k ||x_i - u_k||，可以加平方</span><br><span class="line">	<span class="keyword">for</span> i = 1 to k</span><br><span class="line">		u_k更新为分配的点的中心（每个轴的点的平均值）</span><br><span class="line">		如果簇中心点没有分配到点，就删除</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><p><img src="/img/machine-learning-notes/pic-30.png" class="lazyload placeholder" data-srcset="/img/machine-learning-notes/pic-30.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>$c^{(i)}$是$x^{(i)}$被分配到的簇的下标（1-k）</p>
+<p>$u_k$是簇k</p>
+<p>$\mu _{c^{(i)}}$是$x^{(i)}$被分配到的簇</p>
+<p>损失函数就是每个点到其分配到的簇的距离平方的平均值，其中距离是<strong>欧几里得距离</strong></p>
+<p>也叫Distortion Function</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>选择$K&lt;m$</p>
+<p>随机选择K个训练样本，将$\mu_1 ,\mu_2… \mu_k$设定为这几个点，每次运行容易得到局部最小值，所以运行多次，找到效果最好的点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i = 1 to 100&#123;</span><br><span class="line">	随机初始化</span><br><span class="line">	获取c_i, u_i</span><br><span class="line">	计算损失函数J</span><br><span class="line">&#125;</span><br><span class="line">选择J最小的初始化参数，i可以从50到1000，充分避免局部最小值</span><br></pre></td></tr></table></figure>
+<h3 id="选择簇的个数"><a href="#选择簇的个数" class="headerlink" title="选择簇的个数"></a>选择簇的个数</h3><p> 肘法（Elbow Method）</p>
+<p>选取不同的K，绘制损失函数曲线，选择肘点，但是这个方法不通用，不是每一次都有肘点</p>
+<p>悬疑K的选择还是按照之后的任务目的选择</p>
+<h2 id="异常检测"><a href="#异常检测" class="headerlink" title="异常检测"></a>异常检测</h2>
       </div>
       <div class="post-tags-categories">
         
@@ -805,7 +923,7 @@ $sin(\alpha + \beta)$
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Course-1"><span class="toc-text">Course 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">多元线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E7%BC%A9%E6%94%BE"><span class="toc-text">特征缩放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-text">特征工程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="toc-text">分类-逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sigmoid%E5%87%BD%E6%95%B0"><span class="toc-text">sigmoid函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E8%BE%B9%E7%95%8Cdecision-boundary"><span class="toc-text">决策边界decision boundary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0"><span class="toc-text">成本函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D-1"><span class="toc-text">梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E6%8B%9F%E5%90%88%E9%97%AE%E9%A2%98"><span class="toc-text">过拟合问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-text">正则化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Course-2"><span class="toc-text">Course 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">神经网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%B1%82"><span class="toc-text">神经网络中的层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD-forward-prop"><span class="toc-text">前向传播(forward prop)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%AD%A5%E9%AA%A4"><span class="toc-text">模型训练步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-text">激活函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-text">多分类问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-text">高级优化方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Adam%EF%BC%88Adaptive-Moment-estimation%EF%BC%89"><span class="toc-text">Adam（Adaptive Moment estimation）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-text">其他的网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%88Convolutional-Layer%EF%BC%89"><span class="toc-text">卷积层（Convolutional Layer）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F"><span class="toc-text">构建机器学习系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B"><span class="toc-text">评估一个模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B"><span class="toc-text">如何选择模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE"><span class="toc-text">偏差和方差</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%AD%E4%BB%A3"><span class="toc-text">开发机器学习系统的迭代</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text">误差分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-text">添加数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%EF%BC%88Transfer-Learning%EF%BC%89"><span class="toc-text">迁移学习（Transfer Learning）</span></a></li></ol></li></ol></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Course-1"><span class="toc-text">Course 1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">多元线性回归</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E7%BC%A9%E6%94%BE"><span class="toc-text">特征缩放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-text">特征工程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E7%B1%BB-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="toc-text">分类-逻辑回归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#sigmoid%E5%87%BD%E6%95%B0"><span class="toc-text">sigmoid函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E8%BE%B9%E7%95%8Cdecision-boundary"><span class="toc-text">决策边界decision boundary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E6%9C%AC%E5%87%BD%E6%95%B0"><span class="toc-text">成本函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D-1"><span class="toc-text">梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E6%8B%9F%E5%90%88%E9%97%AE%E9%A2%98"><span class="toc-text">过拟合问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-text">正则化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Course-2"><span class="toc-text">Course 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">神经网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%AD%E7%9A%84%E5%B1%82"><span class="toc-text">神经网络中的层</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD-forward-prop"><span class="toc-text">前向传播(forward prop)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E6%AD%A5%E9%AA%A4"><span class="toc-text">模型训练步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-text">激活函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-text">多分类问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95"><span class="toc-text">高级优化方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Adam%EF%BC%88Adaptive-Moment-estimation%EF%BC%89"><span class="toc-text">Adam（Adaptive Moment estimation）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-text">其他的网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E5%B1%82%EF%BC%88Convolutional-Layer%EF%BC%89"><span class="toc-text">卷积层（Convolutional Layer）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E5%BB%BA%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F"><span class="toc-text">构建机器学习系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B"><span class="toc-text">评估一个模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E6%A8%A1%E5%9E%8B"><span class="toc-text">如何选择模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%81%8F%E5%B7%AE%E5%92%8C%E6%96%B9%E5%B7%AE"><span class="toc-text">偏差和方差</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%8F%91%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%AD%E4%BB%A3"><span class="toc-text">开发机器学习系统的迭代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AF%E5%B7%AE%E5%88%86%E6%9E%90"><span class="toc-text">误差分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE"><span class="toc-text">添加数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0%EF%BC%88Transfer-Learning%EF%BC%89"><span class="toc-text">迁移学习（Transfer Learning）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%AE%8C%E6%95%B4%E5%91%A8%E6%9C%9F"><span class="toc-text">机器学习项目的完整周期</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E6%B3%A8%E5%85%AC%E5%B9%B3%E3%80%81%E5%81%8F%E8%A7%81%E3%80%81%E4%BC%A6%E7%90%86"><span class="toc-text">关注公平、偏见、伦理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%BE%E6%96%9C%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E8%AF%AF%E5%B7%AE%E6%8C%87%E6%A0%87"><span class="toc-text">倾斜数据集的误差指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A1%E9%87%8F%E7%BA%AF%E5%BA%A6%EF%BC%88purity%EF%BC%89"><span class="toc-text">衡量纯度（purity）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%8F%E5%B0%8F%E7%86%B5%EF%BC%9A%E4%BF%A1%E6%81%AF%E5%A2%9E%E7%9B%8A%EF%BC%88Information-Gain%EF%BC%89"><span class="toc-text">减小熵：信息增益（Information Gain）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81-One-Hot-Encoding"><span class="toc-text">独热编码(One Hot Encoding)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%AD%E5%80%BC%E7%89%B9%E5%BE%81"><span class="toc-text">连续值特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9E%E5%BD%92%E6%A0%91"><span class="toc-text">回归树</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%A4%9A%E4%B8%AA%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">使用多个决策树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BE%E5%9B%9E%E6%8A%BD%E6%A0%B7"><span class="toc-text">放回抽样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%EF%BC%88Random-Forest%EF%BC%89"><span class="toc-text">随机森林（Random Forest）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XGBoost%EF%BC%88eXtreme-Gradient-Boosting%EF%BC%89"><span class="toc-text">XGBoost（eXtreme Gradient Boosting）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">什么时候使用决策树</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Course-3"><span class="toc-text">Course 3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%81%9A%E7%B1%BB"><span class="toc-text">聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#K-means"><span class="toc-text">K-means</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-text">损失函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E7%B0%87%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="toc-text">选择簇的个数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E6%A3%80%E6%B5%8B"><span class="toc-text">异常检测</span></a></li></ol></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
