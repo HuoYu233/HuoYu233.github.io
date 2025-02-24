@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>AI面经 | Blog of Kaz</title>
+  <title>Algorithm-Data-Structure | Blog of Kaz</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -339,21 +339,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('https://img1.baidu.com/it/u=4282277671,2501328998&fm=253&fmt=auto&app=138&f=JPEG?w=449&h=252')">
+  background-position: center center;position: relative;background-image:url('https://cdn.acwing.com/media/activity/surface/QQ%E5%9B%BE%E7%89%8720231022233411.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        AI面经
+        Algorithm-Data-Structure
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2025-01-26 |
+          <i class="fas fa-calendar"></i> Published in：2023-07-07 |
         </span>
       
 
@@ -377,298 +377,60 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h3 id="1-机器学习、深度学习、与人工智能对比"><a href="#1-机器学习、深度学习、与人工智能对比" class="headerlink" title="1 机器学习、深度学习、与人工智能对比"></a>1 机器学习、深度学习、与人工智能对比</h3><ul>
-<li><strong>机器学习是一种实现人工智能的方法，深度学习是一种实现机器学习的技术</strong></li>
-</ul>
-<blockquote>
-<p><strong>人工智能</strong>（人工智能是计算机科学的一个分支，它企图了解智能的本质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器）</p>
-<p><strong>分类</strong>： 弱人工智能（当前）、强人工智能、超人工智能</p>
-<p><strong>机器学习</strong>（MachineLearning）简称ML：机器学习属于人工智能的一个分支，也是人工智能的和核心。机器学习理论主要是设计和分析一些让计算机可以自动”学习“的算法。</p>
-<p><strong>深度学习</strong>（DeepLearning）简称DL。<strong>最初</strong>的深度学习是<strong>利用深度神经网络</strong>来解决特征表达的一种学习过程。深度神经网络本身并不是一个全新的概念，可大致理解为包含多个隐含层的神经网络结构。为了提高深层神经网络的训练效果，人们对神经元的连接方法和激活函数等方面做出相应的调整。深度学习是机器学习研究中的一个新的领域，其动机在于<strong>建立、模拟人脑进行分析学习的神经网络，它模仿人脑的机制来解释数据，如图象、声音、文本</strong>。</p>
-</blockquote>
-<h4 id="1-1-人工智能"><a href="#1-1-人工智能" class="headerlink" title="1.1 人工智能"></a>1.1 人工智能</h4><blockquote>
-<p><strong>人工智能（Artificial intelligence）简称AI</strong>。人工智能是计算机科学的一个分支，它企图了解智能的本质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。</p>
+        <h2 id="链表与邻接表"><a href="#链表与邻接表" class="headerlink" title="链表与邻接表"></a>链表与邻接表</h2><p>由于用<code>结构体+指针</code>比较慢，一般在面试题使用，在这里使用<strong>数组</strong>模拟链表</p>
 <ul>
-<li>人工智能目前分为弱人工智能和强人工智能和超人工智能：</li>
-<li><p><strong>弱人工智能</strong>：弱人工智能（Artificial Narrow Intelligence /ANI),只专注于完成某个特定的任务，例如语音识别、图象识别和翻译等，是擅长于单个方面的人工智能。它们只是用于解决特定的具体类的任务问题而存在，大都是统计数据，以此从中归纳出模型。由于弱人工智能智能处理较为单一的问题，且发展程度并没有达到模拟人脑思维的程度，所以弱人工智能仍然属于“工具”的范畴，与传统的“产品”在本质上并无区别。</p>
-</li>
-<li><p><strong>强人工智能</strong>：强人工智能（Artificial General lnteligence /AGI),属于人类级别的人工智能，在各方面都能和人类比肩，它能够进行思考、计划、解决问题、抽象思维、理解复杂理念、快速学习和从经验中学习等操作，并且和人类一样得心应手。</p>
-</li>
-<li><p><strong>超人工智能</strong>：超人工智能（Artificial Superintelligence/ASI），在几乎所有领域都比最聪明的人类大脑都聪明许多，包括科学创新、通识和社交技能。在超人工智能阶段，人工智能已经跨过“奇点”，其计算和思维能力已经远超人脑。此时的人工智能已经不是人类可以理解和想象。人工智能将打破人脑受到的维度限制，其所观察和思考的内容，人脑已经无法理解，人工智能将形成一个新的社会。</p>
-</li>
+<li>单链表</li>
 </ul>
-<p><strong>目前我们仍处于弱人工智能阶段</strong>。</p>
-</blockquote>
-<h4 id="1-2-机器学习"><a href="#1-2-机器学习" class="headerlink" title="1.2 机器学习"></a>1.2 机器学习</h4><blockquote>
-<p><strong>机器学习（Machine Learning）简称ML</strong>。机器学习属于人工智能的一个分支，也是人工智能的和核心。机器学习理论主要是设计和分析一些让计算机可以自动”学习“的算法。</p>
-</blockquote>
-<h4 id="1-3-深度学习"><a href="#1-3-深度学习" class="headerlink" title="1.3 深度学习"></a>1.3 深度学习</h4><blockquote>
-<p><strong>深度学习（Deep Learning）简称DL</strong>。最初的深度学习是利用深度神经网络来解决特征表达的一种学习过程。深度神经网络本身并不是一个全新的概念，可大致理解为包含多个隐含层的神经网络结构。为了提高深层神经网络的训练效果，人们对神经元的连接方法和激活函数等方面做出相应的调整。深度学习是机器学习研究中的一个新的领域，其动机在于建立、模拟人脑进行分析学习的神经网络，它模仿人脑的机制来解释数据，如图象、声音、文本。</p>
-<p>注意：你可能在接触深度学习的时候也听到过<strong>监督学习</strong>、<strong>非监督学习</strong>、<strong>半监督学习</strong>等概念，下面就顺便对这三个名词解析下：</p>
-<ol>
-<li><strong>监督学习：</strong>用一部分已知分类、有标记的样本来训练机器后，让它用学到的特征，对没有还分类、无标记的样本进行分类、贴标签。多用于分类。</li>
-<li><strong>非监督学习：</strong>所有的数据没有标记，类别未知，让它自己学习样本之间的相似性来进行分类。多用于聚类。</li>
-<li><strong>半监督学习：</strong>有两个样本集，一个有标记，一个没有标记。综合利用有类标的样本（ labeled sample）和没有类标的样本（ unlabeled sample），来生成合适的分类。</li>
+<p><code>e[N]</code>：储存链表结点的值</p>
+<p><code>ne[N]</code>：储存结点的下一个结点下标，其中空结点下标为-1</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// head存储链表头，e[]存储节点的值，ne[]存储节点的next指针，idx表示当前用到了哪个节点</span></span><br><span class="line"><span class="type">int</span> head, e[N], ne[N], idx;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head = <span class="number">-1</span>;</span><br><span class="line">    idx = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在链表头插入一个数a</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = a, ne[idx] = head, head = idx ++ ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在a插到下标是k的结点后面</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = a, ne[idx] = ne[k], ne[k] = idx ++ ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将头结点删除，需要保证头结点存在</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">remove</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    head = ne[head];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将下标为k的结点的后一个点删除</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">remove</span><span class="params">(k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ne[k] = ne[ne[k]];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>双链表</li>
+</ul>
+<p>作用：优化某些问题</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// e[]表示节点的值，l[]表示节点的左指针，r[]表示节点的右指针，idx表示当前用到了哪个节点</span></span><br><span class="line"><span class="type">int</span> e[N], l[N], r[N], idx;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//0是左端点，1是右端点</span></span><br><span class="line">    r[<span class="number">0</span>] = <span class="number">1</span>, l[<span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">    idx = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在节点a的右边插入一个数x</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    e[idx] = x;</span><br><span class="line">    l[idx] = a, r[idx] = r[a];</span><br><span class="line">    l[r[a]] = idx, r[a] = idx ++ ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除节点a</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">remove</span><span class="params">(<span class="type">int</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    l[r[a]] = l[a];</span><br><span class="line">    r[l[a]] = r[a];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>邻接表</li>
+</ul>
+<p>N个单链表，用于存储树和图</p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>先进后出(FILO)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// tt表示栈顶</span></span><br><span class="line"><span class="type">int</span> stk[N], tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向栈顶插入一个数</span></span><br><span class="line">stk[ ++ tt] = x;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从栈顶弹出一个数</span></span><br><span class="line">tt -- ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 栈顶的值</span></span><br><span class="line">stk[tt];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断栈是否为空，如果 tt &gt; 0，则表示不为空</span></span><br><span class="line"><span class="keyword">if</span> (tt &gt; <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">not</span> empty</span><br><span class="line">&#125;<span class="keyword">else</span></span><br><span class="line">&#123;</span><br><span class="line">    empty</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>先进先出(FIFO)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hh 表示队头，tt表示队尾</span></span><br><span class="line"><span class="type">int</span> q[N], hh = <span class="number">0</span>, tt = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向队尾插入一个数</span></span><br><span class="line">q[ ++ tt] = x;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从队头弹出一个数</span></span><br><span class="line">hh ++ ;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 队头的值</span></span><br><span class="line">q[hh];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断队列是否为空，如果 hh &lt;= tt，则表示不为空</span></span><br><span class="line"><span class="keyword">if</span> (hh &lt;= tt)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>循环队列</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// hh 表示队头，tt表示队尾的后一个位置</span></span><br><span class="line"><span class="type">int</span> q[N], hh = <span class="number">0</span>, tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 向队尾插入一个数</span></span><br><span class="line">q[tt ++ ] = x;</span><br><span class="line"><span class="keyword">if</span> (tt == N) tt = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从队头弹出一个数</span></span><br><span class="line">hh ++ ;</span><br><span class="line"><span class="keyword">if</span> (hh == N) hh = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 队头的值</span></span><br><span class="line">q[hh];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断队列是否为空，如果hh != tt，则表示不为空</span></span><br><span class="line"><span class="keyword">if</span> (hh != tt)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单调栈"><a href="#单调栈" class="headerlink" title="单调栈"></a>单调栈</h2><p>题型：求给定序列每一个数左/右边离他最近的比他大/小的数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> tt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (tt &amp;&amp; <span class="built_in">check</span>(stk[tt], i)) tt -- ;</span><br><span class="line">    stk[ ++ tt] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h2><p>题型：求滑动窗口的最大/小值</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> hh = <span class="number">0</span>, tt = <span class="number">-1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; <span class="built_in">check_out</span>(q[hh])) hh ++ ;  <span class="comment">// 判断队头是否滑出窗口</span></span><br><span class="line">    <span class="keyword">while</span> (hh &lt;= tt &amp;&amp; <span class="built_in">check</span>(q[tt], i)) tt -- ;</span><br><span class="line">    q[ ++ tt] = i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h2><p>对于字符串$s$,判断是否包含模式串$t$</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// s[]是长文本，p[]是模式串，n是s的长度，m是p的长度</span></span><br><span class="line"><span class="comment">//求模式串的Next数组：</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>, j = <span class="number">0</span>; i &lt;= m; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; p[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (p[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    ne[i] = j;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 匹配</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt;= n; i ++ )</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">while</span> (j &amp;&amp; s[i] != p[j + <span class="number">1</span>]) j = ne[j];</span><br><span class="line">    <span class="keyword">if</span> (s[i] == p[j + <span class="number">1</span>]) j ++ ;</span><br><span class="line">    <span class="keyword">if</span> (j == m)</span><br><span class="line">    &#123;</span><br><span class="line">        j = ne[j];</span><br><span class="line">        <span class="comment">// 匹配成功后的逻辑</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.<span class="built_in">find</span>(t) != s.npos</span><br></pre></td></tr></table></figure>
+<h2 id="Trie树"><a href="#Trie树" class="headerlink" title="Trie树"></a>Trie树</h2><p>快速存储和查找字符串集合的数据结构</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> son[N][<span class="number">26</span>], cnt[N], idx;</span><br><span class="line"><span class="comment">// 0号点既是根节点，又是空节点</span></span><br><span class="line"><span class="comment">// son[][]存储树中每个节点的子节点</span></span><br><span class="line"><span class="comment">// cnt[]存储以每个节点结尾的单词数量</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 插入一个字符串</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> p = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; str[i]; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u = str[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!son[p][u]) son[p][u] = ++ idx;</span><br><span class="line">        p = son[p][u];</span><br><span class="line">    &#125;</span><br><span class="line">    cnt[p] ++ ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询字符串出现的次数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">char</span> *str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> p = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; str[i]; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> u = str[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (!son[p][u]) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        p = son[p][u];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> cnt[p];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/145/">最大异或对</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.acwing.com/problem/content/144/">前缀统计</a></p>
+<h2 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h2><ol>
+<li>将两个集合合并</li>
+<li>询问两个元素是否在一个集合当中</li>
 </ol>
-</blockquote>
-<h4 id="1-4-区别与联系"><a href="#1-4-区别与联系" class="headerlink" title="1.4 区别与联系"></a>1.4 区别与联系</h4><p><img src="\img\ai-mianjing\pic-1.png" class="lazyload placeholder" data-srcset="\img\ai-mianjing\pic-1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
+<p>近乎$O(1)$</p>
+<p>基本原理：每一个集合用一棵树表示，树根的编号就是整个集合的编号。每个节点存储它的父节点$p[x]$表示$x$的父节点</p>
 <ul>
-<li>人工智能的研究领域包括 <strong>专家系统</strong>(Expert Systems)、<strong>机器学习</strong>(Machine Learning)、<strong>模式识别</strong>、<strong>进化计算</strong>(Evolutionary Computation)、<strong>模糊逻辑</strong>(Fussy Logic)、<strong>计算机视觉</strong>(Computer Vision)、<strong>自然语言处理</strong>(NLP)、<strong>推荐系统</strong>(Recommender Systems)</li>
-<li>深度学习，一种<strong>实现机器学习</strong>的技术。是机器学习中的一个方法或者分支。</li>
-<li><strong>深度学习是用于建立、模拟人脑进行分析学习的神经网络，并模仿人脑的机制来解释数据的一种机器学习技术</strong>。</li>
-<li>它的基本特点，是试图模仿大脑的神经元之间传递，处理信息的模式。最显著的应用是计算机视觉和<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=自然语言处理&amp;spm=1001.2101.3001.7020">自然语言处理</a>(NLP)领域。显然，<strong>“深度学习”是与机器学习中的“神经网络”是强相关</strong>，“神经网络”也是其主要的算法和手段；或者我们可以将“深度学习”称之为“改良版的神经网络”算法。</li>
-<li><strong>总结：人工智能是一个很老的概念，机器学习是人工智能的一个子集，深度学习又是机器学习的一个子集。机器学习与深度学习都是需要大量数据来“喂”的，是大数据技术上的一个应用，同时深度学习还需要更高的运算能力支撑，如GPU</strong></li>
+<li>如何判断是树根？</li>
 </ul>
-<p><img src="\img\ai-mianjing\pic-2.png" class="lazyload placeholder" data-srcset="\img\ai-mianjing\pic-2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<h3 id="2-AI的分类"><a href="#2-AI的分类" class="headerlink" title="2 AI的分类"></a>2 AI的分类</h3><ul>
-<li><p><strong>模式识别</strong>：</p>
+<p>$p[x] = x$</p>
 <ul>
-<li><p><strong>模式识别是指用计算机对物体进行识别。</strong></p>
-<p><strong>物体指文字、符号、图形、图像、语音、声音等实体对象；</strong></p>
-<p>•<strong>不包括概念、思想、意识等虚拟对象，它们属于认知和哲学研究范畴。</strong></p>
-</li>
-<li><p><strong>模式识别应用：</strong></p>
-<p>• <strong>文字识别，车牌识别，人脸识别，视网膜识别，指纹识别，掌纹识别等</strong></p>
-</li>
+<li>如何求$x$的集合编号</li>
 </ul>
-</li>
-<li><p><strong>自然语言处理</strong>：用自然语言同计算机进行通讯的一种技术</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(p[x]!=x) x = p[x]</span><br></pre></td></tr></table></figure>
 <ul>
-<li>机器翻译</li>
-<li>语音识别（<strong>可以单列</strong>）</li>
-<li>文本分类/预测</li>
+<li>如何合并两个区间</li>
 </ul>
-</li>
-<li><p><strong>机器学习</strong>（重点是深度学习）：机器学习理论主要是设计和分析一些让计算机可以自动”学习“的算法</p>
-</li>
-<li><p><strong>计算机视觉</strong>：用摄影机和电脑代替人眼对目标进行识别、跟踪和测量等机器视觉，并进一步做图形处理，使电脑处理成为更适合人眼观察或传送给仪器检测的图像</p>
-</li>
-<li><p><strong>智能机器人</strong>：给机器人装上“大脑芯片”，从而使其智能性更强，在认知学 习、自动组织、对模糊信</p>
-<p>息的综合处理等方面将会前进一大步</p>
-</li>
-<li><p><strong>自动程序设计</strong>：自动程序设计是指根据给定问题的原始描述，自动生成满足要求的程序</p>
-</li>
-<li><p><strong>数据挖掘</strong>：从大量的数据中搜索隐藏在其中信息的过程</p>
-</li>
-<li><p><strong>专家系统</strong>等</p>
-</li>
-</ul>
-<h3 id="3-一些深度学习概念"><a href="#3-一些深度学习概念" class="headerlink" title="3 一些深度学习概念"></a>3 一些深度学习概念</h3><h4 id="监督学习基础定义："><a href="#监督学习基础定义：" class="headerlink" title="监督学习基础定义："></a><strong>监督学习基础定义</strong>：</h4><p><strong>有监督学习 (Supervised Learning)</strong>: 使用<strong>已经标注的数据</strong>训练模型，目的是让模型学会如何将输入映射到期望的输出。例如，使用一组已知类别的图片来训练一个图像<strong>分类模型</strong>，模型学习如何根据输入的图片预测正确的类别 。</p>
-<p><strong>无监督学习 (Unsupervised Learning)</strong>: <strong>不使用任何标注数据</strong>，让模型自己发现数据中的结构和模式。例如，<strong>聚类</strong>算法可以将数据分为几个不同的组，而不事先告诉模型应该有多少组，或者各组的特征 。</p>
-<p><strong>半监督学习 (Semi-Supervised Learning)</strong>: 结合<strong>有监督和无监督学习</strong>的方法，使用<strong>少量标注数据和大量未标注数据</strong>共同训练模型。这种方法在标注数据难以获得但未标注数据丰富的场景下特别有用 。 例如：<strong>医学影像</strong>，大部分没有标签，人工打标较为昂贵。可以用</p>
-<ul>
-<li>使用已标注数据训练一个分类器。</li>
-<li>用该分类器对未标注数据进行预测，生成伪标签。</li>
-<li>选择置信度最高的伪标签来扩充训练集。</li>
-<li>结合原始的标注数据和带有伪标签的数据重新训练分类器</li>
-</ul>
-<p><strong>自监督学习 (Self-Supervised Learning)</strong>: 一种特殊的无监督学习方法，通过<strong>自动生成伪标签</strong>来训练模型。这种方法通过创建预测任务（如预测未来的帧、填充缺失的部分、一个自监督学习模型可以通过尝试预测句子中缺失的单词来学习语言的语法和词汇等），使模型能够从输入数据本身学习有用的表示 。 通常是<strong>预训练+下游任务</strong>的方式。</p>
-<p><strong>对比</strong>：</p>
-<blockquote>
-<ul>
-<li><strong>有监督学习</strong>通常需要大量的标注数据，适用于标注数据充足的任务。</li>
-<li><strong>无监督学习</strong>不需要标签，适用于探索数据内在结构和关系的任务。</li>
-<li><strong>半监督学习</strong>结合了有监督和无监督的优点，适用于标注数据有限但无标签数据多的情况。</li>
-<li><strong>自监督学习</strong>则是一种新兴的方法，它能够从未标注的数据中学习到有用的特征表示，适用于标注数据难以获得但需要丰富特征表示的任务。</li>
-</ul>
-</blockquote>
-<p><strong>半监督学习举例</strong></p>
-<ul>
-<li>使用已标注数据训练一个分类器。</li>
-<li>用该分类器对未标注数据进行预测，生成伪标签。</li>
-<li>选择置信度最高的伪标签来扩充训练集。</li>
-<li>结合原始的标注数据和带有伪标签的数据重新训练分类器</li>
-</ul>
-<h4 id="对比预训练："><a href="#对比预训练：" class="headerlink" title="对比预训练："></a><strong>对比预训练</strong>：</h4><blockquote>
-<p>对比预训练是一种自监督学习方法，其核心目标是通过学习<strong>区分不同数据之间的相似性和差异性来提升模型的特征表示能力</strong>。这种方法不依赖于人工标注的数据，而是通过<strong>定义一种或多种对比任务</strong>（比如区分不同图像、文本或声音等），使得模型能够自动学习到数据的<strong>内在特征和结构</strong>。对比预训练通过比较正样本对（相似）和负样本对（不相似）来优化模型，使模型能够捕捉到数据中有用的信息和模式，从而在没有大量标注数据的情况下也能有效提升模型性能 。</p>
-<p><strong>在NLP和CV等领域，对比学习已经成为一种重要的自监督学习方法</strong>，<strong>通过自监督预训练模式</strong>，模型可以从数据本身的先验知识分布中吸取图像或文本的特征，得到一个能够更好地适应不同任务和领域的预训练模 。这种方法的优势在于<strong>无需大量标注数据</strong>，同时可以<strong>显著提高模型的泛化性能和学习能力</strong> 。</p>
-</blockquote>
-<h4 id="平行语料库："><a href="#平行语料库：" class="headerlink" title="平行语料库："></a><strong>平行语料库</strong>：</h4><blockquote>
-<p><strong>平行语料库是收录了某一源语言文本及其对应的目标语文本的语料库</strong>。具体来说，平行语料库包括以下内容：</p>
-<ul>
-<li><strong>源语言和目标语言的对应文本</strong>：这些文本在语义上是相同的，只是用不同的语言表达，如英文原版和中文翻译版。</li>
-<li><strong>对齐的层面</strong>：平行对齐指的是源语文本和目标语文本之间的具体单位的对应关系或翻译关系，可以细分为词汇、语句和段落等层面的对齐。</li>
-<li><strong>类型</strong>：根据所涉及的语种数量和方向，平行语料库可以分为单向平行语料库、双向平行语料库和多向平行语料库。</li>
-<li><strong>应用</strong>：平行语料库对于语言对比、双语词典编纂、机器翻译、翻译策略与规范研究等都具有很高的应用价值。</li>
-</ul>
-<p>总的来说，平行语料库不仅为机器翻译提供了必要的数据支持，也是推动相关领域发展和进步的重要驱动力。随着科技的不断进步和全球化的深入发展，平行语料库将在未来发挥更加重要的作用</p>
-</blockquote>
-<h4 id="联合学习joint-study："><a href="#联合学习joint-study：" class="headerlink" title="联合学习joint study："></a><strong>联合学习joint study</strong>：</h4><blockquote>
-<p><strong>联合学习（Joint Learning）是一种机器学习范式，它涉及同时训练多个模型或任务，以便它们可以共享知识或参数，从而提高整体的学习效率和泛化能力</strong>。</p>
-<p>在联合学习中，不同的模型或任务之间存在一定的关联性，这种关联性可以是因为它们处理相似的数据类型，或者因为它们解决的是相关的子问题。通过联合学习，这些模型可以相互促进，提高各自的性能。以下是一些关键点：</p>
-<ul>
-<li><strong>模型组合</strong>：在联合学习中，一个大模型由多个小模型组成，这些小模型可以独立训练，也可以与其他模型一起联合训练。</li>
-<li><strong>多任务学习</strong>：联合学习与多任务学习（Multi-Task Learning）有相似之处，多任务学习也是让一个模型同时学习多个任务，并且在学习过程中共享参数。这样做的好处是可以利用任务之间的相关性来提升模型的泛化能力。</li>
-<li><strong>应用领域</strong>：联合学习在自然语言处理（NLP）领域有广泛的应用，例如，可以通过联合模型来同时处理语法分析和语义理解等任务。</li>
-<li><strong>端到端学习</strong>：在某些情况下，联合学习还涉及到端到端的训练方法，这意味着从输入到输出的整个流程都被整合在一个学习过程中，以此来优化整体性能。</li>
-</ul>
-<p>总的来说，联合学习是一种强大的学习方法，它通过整合多个相关任务或模型的学习过程，能够提高学习效率和模型的泛化能力。这种方法在处理复杂问题时特别有用，因为它可以有效地利用不同任务之间的共同信息。</p>
-</blockquote>
-<h3 id="4-衡量模型好坏的一些指标"><a href="#4-衡量模型好坏的一些指标" class="headerlink" title="4 衡量模型好坏的一些指标"></a>4 衡量模型好坏的一些指标</h3><h4 id="F1-score-精确率precision-召回率re-call"><a href="#F1-score-精确率precision-召回率re-call" class="headerlink" title="F1 score 精确率precision 召回率re-call"></a>F1 score 精确率precision 召回率re-call</h4><p><img src="\img\ai-mianjing\pic-3.png" class="lazyload placeholder" data-srcset="\img\ai-mianjing\pic-3.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<p><img src="\img\ai-mianjing\pic-4.png" class="lazyload placeholder" data-srcset="\img\ai-mianjing\pic-4.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<h4 id="IOU-mIOU"><a href="#IOU-mIOU" class="headerlink" title="IOU mIOU"></a>IOU mIOU</h4><p><img src="\img\ai-mianjing\pic-5.png" class="lazyload placeholder" data-srcset="\img\ai-mianjing\pic-5.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="img"></p>
-<h3 id="机器学习20道"><a href="#机器学习20道" class="headerlink" title="机器学习20道"></a>机器学习20道</h3><ol>
-<li><p>网络配置时batchsize的大小怎样设置？过小和过大分别有什么特点？ <strong>小的不稳定 大的速度快</strong></p>
-<blockquote>
-<ul>
-<li>大的batchsize <strong>减少训练时间，提高稳定性</strong>。 这是肯定的，同样的epoch数目，在性能允许情况下，大的batchsize需要的batch数目减少了，所以可以<strong>减少训练时间</strong>。另一方面，大的batch size梯度的计算更加稳定，因为模型训练曲线会更加平滑。</li>
-<li>过大的batchsize 泛化能力下降。而<strong>过大的批量大小会导致收敛速度变慢</strong>，并且可能需要更多的内存 在一定范围内，<strong>增加batchsize有助于收敛的稳定性</strong>，但是随着batchsize的增加，<strong>模型的性能会下降</strong>。</li>
-<li>同样是通过对训练步数的影响，小的batch_size使模型迭代次数增多，<strong>提前到达拟合点</strong>，但是epoch没结束，继续学习训练数据，容易导致过拟合于原始数据</li>
-</ul>
-</blockquote>
-</li>
-<li><p>设置学习率衰减的原因？</p>
-<blockquote>
-<p>学习率衰减是为了让学习率随着训练过程逐渐减小，有助于模型<strong>在接近全局最优解时减小步长</strong>，避免在优化过程中跳过最佳点或产生不必要的波动</p>
-</blockquote>
-</li>
-<li><p>有哪些分类算法？</p>
-<blockquote>
-<p>朴素贝叶斯、逻辑回归、K 最近邻 （KNN）、支持向量机 （SVM）、决策树、随机森林和神经网络</p>
-</blockquote>
-</li>
-<li><p>分类和回归的区别？</p>
-<blockquote>
-<p>分类预测<strong>离散标签</strong>，将数据分类为两个或多个类别。回归预测<strong>连续量</strong>，估计变量之间的关系</p>
-</blockquote>
-</li>
-<li><p>请描述下k-means聚类的过程？</p>
-<blockquote>
-<p>k-means聚类是一种<strong>迭代算法</strong>，首先随机选取k个初始中心点，然后<strong>将每个点分配到最近的中心点形成的簇</strong>中，接着重新计算每个簇的中心点，重复此过程直到中心点不再变化或达到预设的迭代次数。</p>
-</blockquote>
-</li>
-<li><p>训练集、测试集、验证集的作用？</p>
-<blockquote>
-<p>数据集的作用：<strong>训练集用于训练模型</strong>，<strong>验证集用于调整超参数</strong>并在训练过程中提供无偏评估，<strong>测试集</strong>用于评估模型的<strong>泛化性能</strong></p>
-<ol>
-<li><strong>评估偏差</strong>: 如果我们<strong>直接根据测试集调整超参数，那么测试集就不再是独立的评估数据集</strong>。这意味着我们无法准确地估计模型在新数据上的性能，因为测试集已经被用来调整模型了。</li>
-</ol>
-</blockquote>
-</li>
-<li><p>请讲解一下k折交叉验证？</p>
-<blockquote>
-<p>在 k 折叠交叉验证中，数据被划分为 k 个子集。每次，将 k 个子集中的一个用作测试集，并将其他 k-1 子集放在一起形成一个训练集。<strong>该过程重复 k 次，每个 k 个子集恰好用作测试集一次</strong>。</p>
-</blockquote>
-</li>
-<li><p>分类和聚类的区别？</p>
-<blockquote>
-<p>分类是<strong>监督学习任务</strong>，需要<strong>标注数据</strong>来训练模型；聚类是<strong>无监督学习</strong>任务，不需要标注数据，目的是发现数据<strong>内在的结构或模式。</strong></p>
-</blockquote>
-</li>
-<li><p>描述一下梯度的概念？</p>
-<blockquote>
-<p>梯度是导数的多变量推广，表示<strong>函数最快增长的方向和速率</strong>。在优化中，它用于查找函数减小最快的方向。</p>
-<p>eg:</p>
-<p>例如，考虑二元函数 f(x, y) = x^2 + y^2。我们可以计算它的梯度：</p>
-<ol>
-<li>计算偏导数：∂f/∂x = 2x，∂f/∂y = 2y</li>
-<li>在点 (x0, y0) = (1, 1) 处，梯度向量为：∇f(1, 1) = [2<em>1, 2</em>1] = [2, 2]</li>
-</ol>
-<p>因此，在点 (1, 1) 处，梯度向量指向 [2, 2] 方向，且函数在该方向上的增长率最大，为 √(2^2 + 2^2) = √8 ≈ 2.83。这意味着在点 (1, 1) 处，函数 f(x, y) = x^2 + y^2 沿着 [2, 2] 方向增长最快，且每单位距离增长 2.83。</p>
-</blockquote>
-</li>
-<li><p>有监督学习、无监督学习和半监督学习的区别？</p>
-<blockquote>
-<p>见 1.1 节</p>
-</blockquote>
-</li>
-<li><p>带核的SVM为什么能分类非线性问题？</p>
-<blockquote>
-<p>非线性问题的 SVM：SVM 可以通过使用内核技巧<strong>将输入空间转换为更高维的空间</strong>来对非线性问题进行分类，从而更容易线性分离数据。</p>
-</blockquote>
-</li>
-<li><p>请描述常见的梯度下降方法？</p>
-<blockquote>
-<p>常用的方法包括批量梯度下降、随机梯度下降 （SGD） 和小批量梯度下降，用于计算损失函数梯度的数据量不同。</p>
-<p>批量梯度下降、随机梯度下降（SGD）和小批量梯度下降是梯度下降优化算法的三种不同实现方式，它们在机器学习和深度学习中被广泛使用来优化模 型的参数。<strong>具体介绍如下</strong>：</p>
-<ul>
-<li><strong>批量梯度下降</strong>：它在每次迭代时<strong>使用所有的训练样本来计算梯度</strong>并更新模型参数。这种方法可以确保每次迭代都沿着全局最优方向更新，因此收敛曲线通常比较平滑。然而，当数据集非常大时，每次迭代的计算成本会非常高，导致训练速度变慢。</li>
-<li><strong>随机梯度下降</strong>：它在<strong>每次迭代时只使用一个训练样本来计算梯度并更新模型参数</strong>。这种方法的优点是计算速度快，可以快速进行模型更新，特别适用于大数据集。但是，由于每次更新只基于一个样本，可能会导致收敛过程波动较大，不一定能收敛到全局最优解。</li>
-<li><strong>小批量梯度下降</strong>：它<strong>介于批量梯度下降和随机梯度下降之间</strong>，每次迭代<strong>使用一小部分训练样本</strong>（即小批量）来计算梯度并更新模型参数。这种方法既保留了批量梯度下降的稳定收敛特性，又具有随机梯度下降的快速计算优势。因此，小批量梯度下降在实践中被广泛应用，尤其是在深度学习模型的训练中。</li>
-</ul>
-<p>总的来说，这三种方法都是梯度下降的变体，目的是通过迭代更新模型参数以最小化损失函数。批量梯度下降使用所有数据，收敛稳定但计算成本高；随机梯度下降使用单个样本，计算快但可能波动大；小批量梯度下降折中了前两者的特点，使用部分数据，既稳定又相对高效。</p>
-</blockquote>
-</li>
-<li><p>Adam、RMSprop、Adagrad、Momentum优化算法？</p>
-<blockquote>
-<p><strong>Adam</strong> 将 <strong>RMSprop 和 Stochastic Gradient Descent 的思想与动量相结合</strong>。它动态调整每个参数的学习率。RMSprop 在训练期间调整学习率，而 Adagrad 通过将学习率缩放为与梯度的所有过去平方值的平方根成反比来调整学习率。动量有助于加速新元朝相关方向发展。</p>
-<p>此方法是在<strong>梯度下降的基础上加入了“惯性”的概念</strong>，即考虑了历史梯度对当前梯度的影响，使得更新过程具有一定的连续性，并能够加快学习速度，减少振荡。Momentum 通过使用动量项来对网络参数进行平滑处理，有助于使梯度的摆动幅度变小，从而加快收敛速度。</p>
-</blockquote>
-</li>
-<li><p>什么是过拟合？怎么解决过拟合问题？</p>
-<blockquote>
-<p>过拟合是指模型在训练数据上表现良好但在新数据上泛化能力差的现象。</p>
-<p><strong>解决过拟合的方法</strong>包括增加<strong>数据量</strong>、减少模型<strong>复杂度</strong>、使用<strong>正则化</strong>技术和集成学习方法等。</p>
-</blockquote>
-</li>
-<li><p>怎样解决梯度消失/爆炸问题？</p>
-<blockquote>
-<p><strong>含义</strong>：</p>
-<ol>
-<li><strong>梯度消失</strong>：在深度神经网络的反向传播过程中，梯度可能会因为多层连续的乘法操作而变得非常小，以至于权重几乎不会被更新，导致训练过程提前停止。这种现象通常发生在激活函数选择不当（如使用sigmoid或tanh函数）且网络层次较深的情况下。</li>
-<li><strong>梯度爆炸</strong>：与梯度消失相反，梯度爆炸是指梯度值变得非常大，以至于导致模型参数更新过于频繁和巨大，从而使得模型无法收敛到一个稳定的解。梯度爆炸通常是由于梯度值在反向传播过程中连续乘以较大的数而累积起来的。</li>
-</ol>
-<p>如何解决？</p>
-<ul>
-<li><strong>选择合适的激活函数</strong>：<strong>避免</strong>使用<strong>容易饱和</strong>的激活函数，如sigmoid或tanh，转而使用ReLU（Rectified Linear Units）及其变种Leaky ReLU、Parametric ReLU等，它们在输入值较大时不会饱和，有助于缓解梯度消失问题。</li>
-<li><strong>批量归一化（Batch Normalization）</strong>：通过对每一层的输入进行归一化处理，保持输入数据的均值为0、方差为1，有助于稳定梯度变化，防止梯度消失和爆炸。</li>
-<li><strong>残差连接（Residual Connections）</strong>：在深度网络中使用残差连接，即让前一层的输出直接加到后续某层的输入上，可以保证梯度能够绕过一些层直接传回，从而缓解梯度消失问题。</li>
-<li><strong>梯度裁剪（Gradient Clipping）</strong>：通过设置一个阈值来限制梯度的最大值，可以有效防止梯度爆炸。</li>
-<li><strong>优化器选择</strong>：使用具有自适应学习率调整能力的优化器，如Adam、RMSprop等，可以在不同情况下自动调整学习率，减少梯度消失或爆炸的风险。</li>
-<li><strong>短程记忆结构</strong>：对于循环神经网络（RNN），可以<strong>使用长短时记忆（LSTM）</strong>或门控循环单元（GRU）这类结构来代替传统的RNN结构，因为它们能够更好地捕捉长距离依赖关系，从而缓解梯度消失问题。</li>
-<li><strong>正则化技术</strong>：如L1/L2正则化，也可以帮助控制模型参数的规模，间接地减小梯度爆炸的可能性。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>讲解下神经网络反向传播算法？</p>
-<blockquote>
-<p><strong>反向传播算法</strong>：反向传播是人工神经网络中使用的一种方法，用于计算单个输入输出示例的损失函数相对于网络权重的梯度，从而使用梯度下降更新权重。</p>
-</blockquote>
-</li>
-<li><p>激活函数的作用是什么？有哪些激活函数？它们的表达式分别是？</p>
-<blockquote>
-<p>激活函数作用：引入<strong>非线性</strong>因素，使得神经网络可以学习和模拟任何复杂的函数和数据分布，这样网络就能处理非线性问题。如果<strong>没有激活函数，无论神经网络有多少层，输出都只是输入的线性组合</strong>，这大大限制了网络的表达能力和复杂度。</p>
-<p>常见的激活函数包括 Sigmoid、Tanh、ReLU：（需要去了解一下基本原理）</p>
-</blockquote>
-</li>
-<li><p>请讲解一下正则化的概念？L1正则化是什么？L2正则化是什么？</p>
-<blockquote>
-<p>正则化是机器学习和统计学中用于<strong>防止模型过拟合</strong>的一种技术。过拟合是指模型在训练数据上表现得很好，但在未见过的新数据上表现不佳的现象，通常是因为模型过于复杂，学习到了训练数据中的噪声和细节，而不是潜在的数据生成规律。<strong>正则化通过在模型训练的损失函数中添加一个额外的惩罚项来解决这个问题，该惩罚项会惩罚模型的复杂度</strong></p>
-<ul>
-<li><strong>L1正则化</strong>（也称为Lasso正则化）通过向损失函数添加参数的绝对值之和作为惩罚项来工作。L1正则化倾向于产生稀疏参数，即许多参数会变成零，这可以用于特征选择。</li>
-<li><strong>L2正则化</strong>（也称为Ridge正则化）通过向损失函数添加参数的平方和作为惩罚项来工作。与L1正则化不同，L2正则化倾向于使参数非常小但不完全为零，从而保持所有特征但减少其影响。</li>
-<li>在某些情况下，人们可能会<strong>同时使用L1和L2正则化</strong>，这种方法被称为<strong>弹性网络</strong>正则化。</li>
-<li>正则化技术不仅限于线性模型，它们也广泛应用于神经网络、决策树和其他类型的机器学习模型中。在神经网络中，除了L1和L2正则化外，还有如<strong>Dropout</strong>正则化等特殊形式的正则化技术，它通过在训练过程中随机丢弃一部分神经元来防止过拟合。</li>
-</ul>
-</blockquote>
-</li>
-<li><p>除了BatchNormalization还有其他什么方法来加速模型训练吗？</p>
-<blockquote>
-<ol>
-<li>使用<strong>半字训练（半精度浮点数）</strong></li>
-<li><strong>合理的超参数设计</strong>：选择合适的batch size、epoch数量和学习率策略对于加速模型训练至关重要。较小的batch size可以加快单次迭代的速度，而适当的epoch数量和学习率调整可以帮助模型更快地收敛。</li>
-<li><strong>增大batch size</strong>：虽然增大batch size可以提高训练速度，但过大的batch size可能会影响模型的泛化性能和收敛速度。因此，需要根据具体情况选择合适的batch size大小。</li>
-<li><strong>多GPU分布式训练</strong>：通过使用多个GPU进行模型并行或数据并行训练，可以显著提高模型的训练速度。模型并行是将模型的不同部分分配给不同的计算设备，而数据并行则是将数据集分割成多个子集，每个子集在不同的计算设备上进行处理。</li>
-<li><strong>模型压缩与加速技术</strong>：包括参数剪枝、参数量化、紧凑网络设计、知识蒸馏、低秩分解、参数共享等方法。这些技术旨在减少模型的大小和复杂性，从而提高训练和推理的速度。</li>
-<li><strong>使用预训练模型</strong>：在相似任务上使用预训练模型可以显著减少训练时间，因为预训练模型已经学习了大量的特征，只需要对顶层进行微调即可。</li>
-</ol>
-</blockquote>
-</li>
-<li><p>机器学习中，为何要经常对数据进行预处理？</p>
-<blockquote>
-<p>处理噪声、缺失值、降维、结构化非结构化处理</p>
-<ol>
-<li><strong>处理缺失值与噪声</strong>：数据中可能存在缺失值，预处理可以包括填补或删除这些缺失值，以确保数据的完整性。</li>
-<li><strong>无量纲化</strong>：不同特征可能具有不同的量纲和规模，无量纲化处理可以消除这种差异，使得模型能够更公平地评估每个特征的重要性。</li>
-<li><strong>数据规范化</strong>：通过最值归一化或Z-Score规范化等方法，将数据缩放到特定的范围内，有助于加快模型的收敛速度。</li>
-<li><strong>特征工程</strong>：数据预处理是特征工程的一部分，它包括数据清洗、特征提取、特征选择和特征构造等子问题。通过这些步骤，可以创建出能够使机器学习算法达到最佳性能的特征。</li>
-<li><strong>提高模型性能</strong>：干净且经过恰当处理的数据可以帮助算法更准确地学习模式和关系，从而提高模型的性能。</li>
-<li><strong>增强模型泛化能力</strong>：通过正则化等预处理方法，可以防止模型过拟合，提高其在新数据上的泛化能力。</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-
+<p>设p[x]为x集合编号，p[y]是y集合编号。p[x]=y</p>
+<p>优化：路径压缩，先搜索一遍，再将节点的父节点直接指向树根</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)朴素并查集：</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p[N]; <span class="comment">//存储每个点的祖宗节点</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 返回x的祖宗节点+路径压缩</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p[x] != x) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">        <span class="keyword">return</span> p[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化，假定节点编号是1~n</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ ) p[i] = i;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 合并a和b所在的两个集合：</span></span><br><span class="line">    p[<span class="built_in">find</span>(a)] = <span class="built_in">find</span>(b);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="number">2</span>)维护size的并查集：</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p[N], size[N];</span><br><span class="line">    <span class="comment">//p[]存储每个点的祖宗节点, size[]只有祖宗节点的有意义，表示祖宗节点所在集合中的点的数量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 返回x的祖宗节点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p[x] != x) p[x] = <span class="built_in">find</span>(p[x]);</span><br><span class="line">        <span class="keyword">return</span> p[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化，假定节点编号是1~n</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        p[i] = i;</span><br><span class="line">        size[i] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 合并a和b所在的两个集合：</span></span><br><span class="line">    size[<span class="built_in">find</span>(b)] += size[<span class="built_in">find</span>(a)];</span><br><span class="line">    p[<span class="built_in">find</span>(a)] = <span class="built_in">find</span>(b);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">(<span class="number">3</span>)维护到祖宗节点距离的并查集：</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p[N], d[N];</span><br><span class="line">    <span class="comment">//p[]存储每个点的祖宗节点, d[x]存储x到p[x]的距离</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 返回x的祖宗节点</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> x)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (p[x] != x)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> u = <span class="built_in">find</span>(p[x]);</span><br><span class="line">            d[x] += d[p[x]];</span><br><span class="line">            p[x] = u;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p[x];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化，假定节点编号是1~n</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i ++ )</span><br><span class="line">    &#123;</span><br><span class="line">        p[i] = i;</span><br><span class="line">        d[i] = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 合并a和b所在的两个集合：</span></span><br><span class="line">    p[<span class="built_in">find</span>(a)] = <span class="built_in">find</span>(b);</span><br><span class="line">    d[<span class="built_in">find</span>(a)] = distance; <span class="comment">// 根据具体问题，初始化find(a)的偏移量</span></span><br></pre></td></tr></table></figure>
+<h2 id="C-STL"><a href="#C-STL" class="headerlink" title="C++ STL"></a>C++ STL</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line">vector, 变长数组，倍增的思想</span><br><span class="line">    <span class="built_in">size</span>()  返回元素个数</span><br><span class="line">    <span class="built_in">empty</span>()  返回是否为空</span><br><span class="line">    <span class="built_in">clear</span>()  清空</span><br><span class="line">    <span class="built_in">front</span>()/<span class="built_in">back</span>()</span><br><span class="line">    <span class="built_in">push_back</span>()/<span class="built_in">pop_back</span>()</span><br><span class="line">    <span class="built_in">begin</span>()/<span class="built_in">end</span>()</span><br><span class="line">    []</span><br><span class="line">    支持比较运算，按字典序</span><br><span class="line"></span><br><span class="line">pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;</span><br><span class="line">    first, 第一个元素</span><br><span class="line">    second, 第二个元素</span><br><span class="line">    支持比较运算，以first为第一关键字，以second为第二关键字（字典序）</span><br><span class="line"></span><br><span class="line">string，字符串</span><br><span class="line">    <span class="built_in">size</span>()/<span class="built_in">length</span>()  返回字符串长度</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">clear</span>()</span><br><span class="line">    <span class="built_in">substr</span>(起始下标，(子串长度))  返回子串</span><br><span class="line">    <span class="built_in">c_str</span>()  返回字符串所在字符数组的起始地址</span><br><span class="line"></span><br><span class="line">queue, 队列</span><br><span class="line">    <span class="built_in">size</span>()</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">push</span>()  向队尾插入一个元素</span><br><span class="line">    <span class="built_in">front</span>()  返回队头元素</span><br><span class="line">    <span class="built_in">back</span>()  返回队尾元素</span><br><span class="line">    <span class="built_in">pop</span>()  弹出队头元素</span><br><span class="line"></span><br><span class="line">priority_queue, 优先队列，默认是大根堆</span><br><span class="line">    <span class="built_in">size</span>()</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">push</span>()  插入一个元素</span><br><span class="line">    <span class="built_in">top</span>()  返回堆顶元素</span><br><span class="line">    <span class="built_in">pop</span>()  弹出堆顶元素</span><br><span class="line">    定义成小根堆的方式：priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt;&gt; q;</span><br><span class="line"></span><br><span class="line">stack, 栈</span><br><span class="line">    <span class="built_in">size</span>()</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">push</span>()  向栈顶插入一个元素</span><br><span class="line">    <span class="built_in">top</span>()  返回栈顶元素</span><br><span class="line">    <span class="built_in">pop</span>()  弹出栈顶元素</span><br><span class="line"></span><br><span class="line">deque, 双端队列</span><br><span class="line">    <span class="built_in">size</span>()</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">clear</span>()</span><br><span class="line">    <span class="built_in">front</span>()/<span class="built_in">back</span>()</span><br><span class="line">    <span class="built_in">push_back</span>()/<span class="built_in">pop_back</span>()</span><br><span class="line">    <span class="built_in">push_front</span>()/<span class="built_in">pop_front</span>()</span><br><span class="line">    <span class="built_in">begin</span>()/<span class="built_in">end</span>()</span><br><span class="line">    []</span><br><span class="line"></span><br><span class="line">set, map, multiset, multimap, 基于平衡二叉树（红黑树），动态维护有序序列</span><br><span class="line">    <span class="built_in">size</span>()</span><br><span class="line">    <span class="built_in">empty</span>()</span><br><span class="line">    <span class="built_in">clear</span>()</span><br><span class="line">    <span class="built_in">begin</span>()/<span class="built_in">end</span>()</span><br><span class="line">    ++, -- 返回前驱和后继，时间复杂度 <span class="built_in">O</span>(logn)</span><br><span class="line"></span><br><span class="line">    set/<span class="function">multiset</span></span><br><span class="line"><span class="function">        <span class="title">insert</span><span class="params">()</span>  插入一个数</span></span><br><span class="line"><span class="function">        <span class="title">find</span><span class="params">()</span>  查找一个数</span></span><br><span class="line"><span class="function">        <span class="title">count</span><span class="params">()</span>  返回某一个数的个数</span></span><br><span class="line"><span class="function">        <span class="title">erase</span><span class="params">()</span></span></span><br><span class="line"><span class="function">            <span class="params">(<span class="number">1</span>)</span> 输入是一个数x，删除所有x   <span class="title">O</span><span class="params">(k + logn)</span></span></span><br><span class="line"><span class="function">            <span class="params">(<span class="number">2</span>)</span> 输入一个迭代器，删除这个迭代器</span></span><br><span class="line"><span class="function">        <span class="title">lower_bound</span><span class="params">()</span>/<span class="title">upper_bound</span><span class="params">()</span></span></span><br><span class="line"><span class="function">            <span class="title">lower_bound</span><span class="params">(x)</span>  返回大于等于x的最小的数的迭代器</span></span><br><span class="line"><span class="function">            <span class="title">upper_bound</span><span class="params">(x)</span>  返回大于x的最小的数的迭代器</span></span><br><span class="line"><span class="function">    map/multimap</span></span><br><span class="line"><span class="function">        <span class="title">insert</span><span class="params">()</span>  插入的数是一个pair</span></span><br><span class="line"><span class="function">        <span class="title">erase</span><span class="params">()</span>  输入的参数是pair或者迭代器</span></span><br><span class="line"><span class="function">        <span class="title">find</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        []  注意multimap不支持此操作。 时间复杂度是 <span class="title">O</span><span class="params">(logn)</span></span></span><br><span class="line"><span class="function">        <span class="title">lower_bound</span><span class="params">()</span>/<span class="title">upper_bound</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">unordered_set, unordered_map, unordered_multiset, unordered_multimap, 哈希表</span></span><br><span class="line"><span class="function">    和上面类似，增删改查的时间复杂度是 <span class="title">O</span><span class="params">(<span class="number">1</span>)</span></span></span><br><span class="line"><span class="function">    不支持 <span class="title">lower_bound</span><span class="params">()</span>/<span class="title">upper_bound</span><span class="params">()</span>， 迭代器的++，--</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">bitset, 圧位</span></span><br><span class="line"><span class="function">    bitset&lt;10000&gt; s</span>;</span><br><span class="line">    ~, &amp;, |, ^</span><br><span class="line">    &gt;&gt;, &lt;&lt;</span><br><span class="line">    ==, !=</span><br><span class="line">    []</span><br><span class="line"></span><br><span class="line">    <span class="built_in">count</span>()  返回有多少个<span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">any</span>()  判断是否至少有一个<span class="number">1</span></span><br><span class="line">    <span class="built_in">none</span>()  判断是否全为<span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">set</span>()  把所有位置成<span class="number">1</span></span><br><span class="line">    <span class="built_in">set</span>(k, v)  将第k位变成v</span><br><span class="line">    <span class="built_in">reset</span>()  把所有位变成<span class="number">0</span></span><br><span class="line">    <span class="built_in">flip</span>()  等价于~</span><br><span class="line">    <span class="built_in">flip</span>(k) 把第k位取反</span><br></pre></td></tr></table></figure>
       </div>
       <div class="post-tags-categories">
         
@@ -682,22 +444,47 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img" style="background-size: cover; 
+      background-position: center center;">
+      <img class="lazyload lazyload placeholder" src="https://img2.baidu.com/it/u=1093757134,3274186314&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" class="lazyload placeholder" data-srcset="https://img2.baidu.com/it/u=1093757134,3274186314&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+    </div>
+    <a href="/machine-learning-notes/" class="post-nav-link">
+      <div class="title">
+        <i class="fas fa-angle-left"></i> Prev:
+        <div class="title-text">Machine Learning Notes</div>
+      </div>
+      
+      <!-- <div class="content">
+        Course 1监督学习：输入特征x，输出目标y。对数据集进行预测，分为回归和分类
+无监督学习：输入特征x，没有目标y，
+      </div> -->
+    </a>
+  </div>
+
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="https://img2.baidu.com/it/u=1093757134,3274186314&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" class="lazyload placeholder" data-srcset="https://img2.baidu.com/it/u=1093757134,3274186314&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="https://datawhale-business.oss-cn-hangzhou.aliyuncs.com/23450/dashboard/1736488152304/image.png" class="lazyload placeholder" data-srcset="https://datawhale-business.oss-cn-hangzhou.aliyuncs.com/23450/dashboard/1736488152304/image.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/machine-learning-notes/index/" class="post-nav-link">
+    <a href="/hello-world/" class="post-nav-link">
       <div class="title">
         Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Machine Learning Notes</div>
+        <div class="title-text">Hello World</div>
       </div>
       <!-- <div class="content">
-        Course 1监督学习：输入特征x，输出目标y。对数据集进行预测，分为回归和分类
-无监督学习：输入特征x，没有目标y，
+        勇神牛逼！！！！
+测试latex
+$sin(\alpha + \beta)$
+测试图片
+
+
+测试代码块
+123impor
       </div> -->
     </a>
   </div>
@@ -818,7 +605,7 @@
   <div class='content'>
     <div class="toc-main">
       <div class="toc-content">
-        <!-- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%81%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E3%80%81%E4%B8%8E%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AF%B9%E6%AF%94"><span class="toc-text">1 机器学习、深度学习、与人工智能对比</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="toc-text">1.1 人工智能</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.2 机器学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0"><span class="toc-text">1.3 深度学习</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB"><span class="toc-text">1.4 区别与联系</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-AI%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-text">2 AI的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%80%E4%BA%9B%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A6%82%E5%BF%B5"><span class="toc-text">3 一些深度学习概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">监督学习基础定义：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E6%AF%94%E9%A2%84%E8%AE%AD%E7%BB%83%EF%BC%9A"><span class="toc-text">对比预训练：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B9%B3%E8%A1%8C%E8%AF%AD%E6%96%99%E5%BA%93%EF%BC%9A"><span class="toc-text">平行语料库：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%81%94%E5%90%88%E5%AD%A6%E4%B9%A0joint-study%EF%BC%9A"><span class="toc-text">联合学习joint study：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%A1%A1%E9%87%8F%E6%A8%A1%E5%9E%8B%E5%A5%BD%E5%9D%8F%E7%9A%84%E4%B8%80%E4%BA%9B%E6%8C%87%E6%A0%87"><span class="toc-text">4 衡量模型好坏的一些指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#F1-score-%E7%B2%BE%E7%A1%AE%E7%8E%87precision-%E5%8F%AC%E5%9B%9E%E7%8E%87re-call"><span class="toc-text">F1 score 精确率precision 召回率re-call</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IOU-mIOU"><span class="toc-text">IOU mIOU</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A020%E9%81%93"><span class="toc-text">机器学习20道</span></a></li></ol> -->
+        <!-- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%A1%A8%E4%B8%8E%E9%82%BB%E6%8E%A5%E8%A1%A8"><span class="toc-text">链表与邻接表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%9F%E5%88%97"><span class="toc-text">队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E6%A0%88"><span class="toc-text">单调栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97"><span class="toc-text">单调队列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#KMP"><span class="toc-text">KMP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trie%E6%A0%91"><span class="toc-text">Trie树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B6%E6%9F%A5%E9%9B%86"><span class="toc-text">并查集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-STL"><span class="toc-text">C++ STL</span></a></li></ol> -->
         <div class="toc"></div>
       </div>
     </div>
